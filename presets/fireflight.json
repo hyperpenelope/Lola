@@ -34,5 +34,8 @@
       4,
       6
     ]
+  },
+  "droner": {
+    "enabled": true
   }
 }

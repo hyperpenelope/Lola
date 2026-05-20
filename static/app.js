@@ -54,6 +54,27 @@ const paramGroups = [
     ]
   },
   {
+    id: "droner",
+    title: "Droner",
+    note: "Continuous ambient drone generator driven by global affect state.",
+    controls: [
+      { path: "droner.enabled", label: "Enabled", type: "boolean", value: false },
+      { path: "droner.tick_sec", label: "Tick seconds", type: "range", min: 0.05, max: 2.0, step: 0.01, value: 0.25, suffix: "s" },
+      { path: "droner.tonic_midi", label: "Tonic MIDI", type: "range", min: 24, max: 84, step: 1, value: 45 },
+      { path: "droner.base_channel", label: "Base channel", type: "range", min: 1, max: 120, step: 1, value: 40 },
+      { path: "droner.min_active_voices", label: "Min active voices", type: "range", min: 1, max: 8, step: 1, value: 1 },
+      { path: "droner.max_active_voices", label: "Max active voices", type: "range", min: 1, max: 8, step: 1, value: 4 },
+      { path: "droner.register_min_midi", label: "Register min MIDI", type: "range", min: 12, max: 96, step: 1, value: 36 },
+      { path: "droner.register_max_midi", label: "Register max MIDI", type: "range", min: 24, max: 108, step: 1, value: 72 },
+      { path: "droner.min_note_duration_sec", label: "Min note duration", type: "range", min: 0.5, max: 20.0, step: 0.1, value: 3.0, suffix: "s" },
+      { path: "droner.max_note_duration_sec", label: "Max note duration", type: "range", min: 1.0, max: 30.0, step: 0.1, value: 10.0, suffix: "s" },
+      { path: "droner.min_gap_sec", label: "Min gap", type: "range", min: 0.1, max: 20.0, step: 0.1, value: 1.0, suffix: "s" },
+      { path: "droner.max_gap_sec", label: "Max gap", type: "range", min: 0.2, max: 30.0, step: 0.1, value: 6.0, suffix: "s" },
+      { path: "droner.velocity_min", label: "Velocity min", type: "range", min: 1, max: 127, step: 1, value: 30 },
+      { path: "droner.velocity_max", label: "Velocity max", type: "range", min: 1, max: 127, step: 1, value: 72 }
+    ]
+  },
+  {
     id: "visual-core",
     title: "Visual Core",
     note: "Visual engine queueing, generator choice, and shared background video.",

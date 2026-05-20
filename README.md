@@ -137,3 +137,71 @@ Example:
     python app.py --config presets/fireflight.json
 
 If the config is loaded from the presets directory, the current preset name is exposed to the frontend and control panel.
+
+
+
+## NEW UPDATE: Droner
+
+`Droner` is a continuous ambient note generator. Unlike the main `Composer`, it does not react to individual utterances and does not emit visual events. It listens only to the shared global affect state and periodically schedules long `NoteEvent`s for playback and external OSC MIDI output.
+
+### Behavior
+- Runs continuously when enabled
+- Uses global `valence` to choose the modal scale
+- Uses global `arousal` to increase activity and shorten notes
+- Uses global `dominance` to widen register use and increase overlap
+- Sends only `NoteEvent`
+- Uses dedicated MIDI channels starting from `base_channel`
+
+### Config
+- `droner.enabled`  
+  Turns the droner on or off.
+
+- `droner.tick_sec`  
+  Internal scheduler tick in seconds. Lower values react faster but do more scheduling work.
+
+- `droner.tonic_midi`  
+  Root MIDI note used to build modal note candidates.
+
+- `droner.base_channel`  
+  First MIDI channel used for drone voices. Each active drone voice uses `base_channel + slot`.
+
+- `droner.min_active_voices`  
+  Minimum number of sustained drone voices the generator tries to maintain.
+
+- `droner.max_active_voices`  
+  Maximum number of simultaneous drone voices.
+
+- `droner.register_min_midi`  
+  Lowest allowed MIDI note for drone output.
+
+- `droner.register_max_midi`  
+  Highest allowed MIDI note for drone output.
+
+- `droner.min_note_duration_sec`  
+  Minimum drone note length in seconds.
+
+- `droner.max_note_duration_sec`  
+  Maximum drone note length in seconds.
+
+- `droner.min_gap_sec`  
+  Minimum time between new drone note onsets.
+
+- `droner.max_gap_sec`  
+  Maximum time between new drone note onsets.
+
+- `droner.velocity_min`  
+  Lowest MIDI velocity used for drone notes.
+
+- `droner.velocity_max`  
+  Highest MIDI velocity used for drone notes.
+
+### Mapping summary
+- **Valence** → mode selection (`locrian` … `lydian`)
+- **Arousal** → note density and duration
+- **Dominance** → target overlap and register focus
+
+### Output
+`Droner` emits standard `NoteEvent`s, so it automatically works with:
+- local synth playback
+- OSC MIDI output in `PlaybackEngine`
+- external synth routing by channel range

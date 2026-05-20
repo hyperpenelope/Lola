@@ -12,6 +12,7 @@ import pyglet
 from comms import Comms, TOPIC_UTTERANCE, TOPIC_STATE_UPDATE, TOPIC_TRANSCRIPT
 from composer import Composer
 from config import ConfigStore
+from droner import Droner
 from fireflight import Fireflight
 from http_server import HttpServer
 from models import Utterance, TranscriptEvent
@@ -67,9 +68,11 @@ class App:
             "speech": False,
             "composer": False,
             "playback": False,
+            "droner": False,
             "visual": False,
         }
         self.visual_enabled = bool(visual_enabled)
+        self.droner = Droner(self.config, self.comms)
 
     def submit_text_utterance(self, text: str) -> None:
         text = text.strip()
@@ -142,6 +145,9 @@ class App:
         self.playback.start()
         self._started["playback"] = True
 
+        self.droner.start()
+        self._started["droner"] = True
+
     def stop(self) -> None:
         with self._lock:
             if not self._running:
@@ -162,6 +168,11 @@ class App:
             self.playback.stop()
         except Exception as e:
             print(f"[APP] Error stopping playback: {e}")
+
+        try:
+            self.droner.stop()
+        except Exception as e:
+            print(f"[APP] Error stopping droner: {e}")
 
         if self._started.get("visual"):
             try:
