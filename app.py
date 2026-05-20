@@ -30,6 +30,7 @@ class App:
         host: str = "127.0.0.1",
         port: int = 8000,
         defaults: Optional[Dict[str, Any]] = None,
+        visual_enabled: bool = True,
     ):
         self.config = ConfigStore(
             config_path=config_path,
@@ -68,6 +69,7 @@ class App:
             "playback": False,
             "visual": False,
         }
+        self.visual_enabled = bool(visual_enabled)
 
     def submit_text_utterance(self, text: str) -> None:
         text = text.strip()
@@ -118,8 +120,13 @@ class App:
                 return
             self._running = True
 
-        self.visual.start()
-        self._started["visual"] = True
+        if self.visual_enabled:
+            self.visual.start()
+            self._started["visual"] = True
+        else:
+            self._started["visual"] = False
+            print("[APP] Visual system disabled by config.")
+
 
         self.http.start()
         self._http_thread = threading.Thread(target=self.http.serve_forever, daemon=True)
@@ -156,11 +163,11 @@ class App:
         except Exception as e:
             print(f"[APP] Error stopping playback: {e}")
 
-        try:
-            self.visual.stop()
-        except Exception as e:
-            print(f"[APP] Error stopping visual: {e}")
-
+        if self._started.get("visual"):
+            try:
+                self.visual.stop()
+            except Exception as e:
+                print(f"[APP] Error stopping visual: {e}")
         try:
             self.http.stop()
         except Exception as e:
@@ -195,6 +202,7 @@ def parse_args():
     parser.add_argument("--presets-dir", default='presets', help="Directory for preset JSON files")
     parser.add_argument("--host", default="127.0.0.1", help="HTTP host")
     parser.add_argument("--port", type=int, default=8000, help="HTTP port")
+    parser.add_argument("--no-visual", action="store_true", help="Disable the visual system.")
     return parser.parse_args()
 
 
@@ -206,6 +214,7 @@ def main():
         presets_dir=args.presets_dir,
         host=args.host,
         port=args.port,
+        visual_enabled=not args.no_visual,
     )
 
     def handle_signal(signum, frame):
