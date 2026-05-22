@@ -13,6 +13,7 @@ TOPIC_VISUAL_EVENT = "visual.event"
 TOPIC_NOTE_EVENT = "note.event"
 TOPIC_STOP = "app.stop"
 TOPIC_TRANSCRIPT = "transcript"
+TOPIC_SAMPLE_EVENT = "sample_event"
 
 MessageHandler = Callable[[Any], None]
 

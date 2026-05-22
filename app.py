@@ -14,6 +14,7 @@ from composer import Composer
 from config import ConfigStore
 from droner import Droner
 from fireflight import Fireflight
+from folier import Folier
 from http_server import HttpServer
 from models import Utterance, TranscriptEvent
 from playback import PlaybackEngine
@@ -69,10 +70,12 @@ class App:
             "composer": False,
             "playback": False,
             "droner": False,
+            "folier": False,
             "visual": False,
         }
         self.visual_enabled = bool(visual_enabled)
         self.droner = Droner(self.config, self.comms)
+        self.folier = Folier(self.config, self.comms)
 
     def submit_text_utterance(self, text: str) -> None:
         text = text.strip()
@@ -145,6 +148,9 @@ class App:
         self.playback.start()
         self._started["playback"] = True
 
+        self.folier.start()
+        self._started["folier"] = True
+
         self.droner.start()
         self._started["droner"] = True
 
@@ -165,14 +171,19 @@ class App:
             print(f"[APP] Error stopping composer: {e}")
 
         try:
-            self.playback.stop()
-        except Exception as e:
-            print(f"[APP] Error stopping playback: {e}")
-
-        try:
             self.droner.stop()
         except Exception as e:
             print(f"[APP] Error stopping droner: {e}")
+
+        try:
+            self.folier.stop()
+        except Exception as e:
+            print(f"[APP] Error stopping folier: {e}")
+
+        try:
+            self.playback.stop()
+        except Exception as e:
+            print(f"[APP] Error stopping playback: {e}")
 
         if self._started.get("visual"):
             try:

@@ -144,3 +144,19 @@ class TranscriptEvent:
     kind: str = "final"   # "partial", "final", "partial_clear"
     utterance_id: Optional[str] = None
     words: List[Word] = field(default_factory=list)
+
+
+@dataclass
+class SampleEvent:
+    sample_path: str
+    gain: float = 1.0
+    rate: float = 1.0
+    lowpass_hz: Optional[float] = None
+    highpass_hz: Optional[float] = None
+    delay_mix: float = 0.0
+    delay_time_sec: float = 0.0
+    delay_feedback: float = 0.0
+    reverb_mix: float = 0.0
+    distortion_drive: float = 0.0
+    line_name: str = ""
+    meta: Dict[str, Any] = field(default_factory=dict)
