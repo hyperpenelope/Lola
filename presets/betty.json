@@ -1,0 +1,130 @@
+{
+  "visual": {
+    "active_generator": "fireflight",
+    "video_path": "videos/background-1.mp4",
+    "subtitles_enabled": true,
+    "subtitle_preview_enabled": false,
+    "subtitle_max_blocks": 5,
+    "subtitle_max_chars_per_line": 80,
+    "subtitle_top_margin": 1180,
+    "subtitle_left_right_margin": 48,
+    "subtitle_line_gap": 8,
+    "subtitle_block_gap": 16,
+    "subtitle_base_font_size": 56,
+    "subtitle_depth_scale": 0.58,
+    "subtitle_depth_alpha": 0.58,
+    "subtitle_neutral_color": [
+      198,
+      214,
+      230
+    ],
+    "subtitle_attack": 10.0,
+    "subtitle_release": 6.0,
+    "subtitle_idle_timeout": 40.0,
+    "subtitle_font_name": "Centaur Now"
+  },
+  "fireflight": {
+    "camera_dolly_speed": 0.87
+  },
+  "composer": {
+    "max_voices": 4,
+    "bpm": 75,
+    "step_size_choices": [
+      2,
+      4,
+      6
+    ]
+  },
+  "droner": {
+    "enabled": false
+  },
+  "folier": {
+    "enabled": true,
+    "tick_sec": 0.25,
+    "activity_per_word": 1.0,
+    "activity_decay_per_sec": 0.04,
+    "activity_max": 100.0,
+    "lines": [
+      {
+        "name": "crows",
+        "enabled": true,
+        "mode": "bed",
+        "base_epm": 10,
+        "epm_per_activity": 0.05,
+        "max_polyphony": 2,
+        "gain_min": 0.65,
+        "gain_max": 0.80,
+        "gain_per_activity": 0.001,
+        "rate_min": 0.92,
+        "rate_max": 1.04,
+        "rate_per_activity": 0.0005,
+        "lowpass_hz": 9000,
+        "lowpass_per_activity": -10,
+        "highpass_hz": 80,
+        "highpass_per_activity": 0,
+        "delay_mix": 0.08,
+        "delay_mix_per_activity": 0.001,
+        "delay_time_min": 0.22,
+        "delay_time_max": 0.42,
+        "delay_feedback_min": 0.20,
+        "delay_feedback_max": 0.35,
+        "reverb_mix": 0.24,
+        "reverb_mix_per_activity": 0.002,
+        "distortion_drive": 0.0,
+        "distortion_per_activity": 0.003,
+        "min_duration_sec": 2.5,
+        "max_duration_sec": 6.0
+      },
+      {
+        "name": "alarm",
+        "enabled": true,
+        "mode": "sporadic",
+        "base_epm": 4.2,
+        "epm_per_activity": 0.04,
+        "max_polyphony": 1,
+        "gain_min": 0.52,
+        "gain_max": 0.72,
+        "gain_per_activity": 0.001,
+        "rate_min": 0.96,
+        "rate_max": 1.08,
+        "rate_per_activity": 0.0002,
+        "lowpass_hz": 12000,
+        "highpass_hz": 250,
+        "delay_mix": 0.04,
+        "delay_time_min": 0.18,
+        "delay_time_max": 0.28,
+        "delay_feedback_min": 0.12,
+        "delay_feedback_max": 0.22,
+        "reverb_mix": 0.18,
+        "distortion_drive": 0.0,
+        "min_duration_sec": 1.0,
+        "max_duration_sec": 2.0
+      },
+      {
+        "name": "coins",
+        "enabled": true,
+        "mode": "clustered",
+        "base_epm": 4.5,
+        "epm_per_activity": 0.06,
+        "max_polyphony": 2,
+        "gain_min": 0.50,
+        "gain_max": 0.80,
+        "gain_per_activity": 0.001,
+        "rate_min": 0.85,
+        "rate_max": 1.00,
+        "lowpass_hz": 7000,
+        "highpass_hz": 60,
+        "delay_mix": 0.10,
+        "delay_time_min": 0.30,
+        "delay_time_max": 0.60,
+        "delay_feedback_min": 0.22,
+        "delay_feedback_max": 0.42,
+        "reverb_mix": 0.28,
+        "distortion_drive": 0.02,
+        "distortion_per_activity": 0.002,
+        "min_duration_sec": 3.0,
+        "max_duration_sec": 8.0
+      }
+    ]
+  }
+}
