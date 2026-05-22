@@ -1,4 +1,4 @@
-#N canvas 56 27 1992 1094 12;
+#N canvas 55 27 1993 1094 12;
 #N canvas 798 440 452 301 patchstate 0;
 #X obj 118 168 cputime;
 #X obj 118 28 loadbang;
@@ -35,13 +35,13 @@
 #X obj -1 893 *~;
 #X obj 49 893 *~;
 #X obj 70 50 hsl 128 15 0 1 0 0 voice1-level empty Voice\\\ 1 -2 -8
-0 10 #fcfcfc #000000 #000000 0 1;
+0 10 #fcfcfc #000000 #000000 7200 1;
 #X obj 70 80 hsl 128 15 0 1 0 0 voice2-level empty Voice\\\ 2 -2 -8
-0 10 #fcfcfc #000000 #000000 0 1;
+0 10 #fcfcfc #000000 #000000 12700 1;
 #X obj 70 110 hsl 128 15 0 1 0 0 voice3-level empty Voice\\\ 3 -2 -8
-0 10 #fcfcfc #000000 #000000 0 1;
+0 10 #fcfcfc #000000 #000000 12700 1;
 #X obj 70 140 hsl 128 15 0 1 0 0 voice4-level empty Voice\\\ 4 -2 -8
-0 10 #fcfcfc #000000 #000000 0 1;
+0 10 #fcfcfc #000000 #000000 12700 1;
 #X obj 19 853 r voice1-level;
 #X obj -1 943 +~;
 #X obj 579 893 *~;
@@ -80,7 +80,7 @@
 #X msg 540 80 midi 4 68 120 4;
 #X text 490 0 Test messages;
 #X obj 300 70 route list;
-#X obj 410 140 print localhost:5001:;
+#X obj 410 140 print localhost:5001;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 3 0 6 0;
