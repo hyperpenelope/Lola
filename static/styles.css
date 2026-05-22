@@ -567,3 +567,47 @@ code {
     grid-template-columns: 1fr;
   }
 }
+
+.manual-sfx-list {
+  display: grid;
+  gap: 12px;
+}
+
+.manual-sfx-card {
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.28);
+}
+
+.manual-sfx-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.manual-sfx-head h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.manual-sfx-head p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.manual-sfx-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.manual-sfx-actions button.active {
+  background: linear-gradient(135deg, rgba(111,243,255,0.28), rgba(181,140,255,0.24));
+  border-color: rgba(111, 243, 255, 0.35);
+  color: var(--text);
+}

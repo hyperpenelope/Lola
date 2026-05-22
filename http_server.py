@@ -23,6 +23,7 @@ class HttpServer:
         presets_dir: str | Path | None = None,
         base_dir: str | Path | None = None,
         utterance_callback: Optional[Callable[[str], None]] = None,
+        manual_sfx_callback: Optional[Callable[[str, str], Dict[str, Any]]] = None,
     ):
         self.config_store = config_store
         self.host = host
@@ -31,6 +32,7 @@ class HttpServer:
         self.stop_callback = stop_callback
         self.presets_dir = Path(presets_dir).expanduser().resolve() if presets_dir else None
         self.utterance_callback = utterance_callback
+        self.manual_sfx_callback = manual_sfx_callback
         self.base_dir = Path(base_dir).expanduser().resolve() if base_dir else Path.cwd().resolve()
         self.index_file = self.base_dir / 'html' / "index.html"
         self.static_dir = self.base_dir / "static"
@@ -243,6 +245,37 @@ class HttpServer:
                         server.utterance_callback(text)
                         self._ok({"ok": True, "text": text})
                         return
+
+                    if path == "/manual-sfx":
+                        data = self._read_json()
+                        name = (data.get("name") or "").strip()
+                        action = (data.get("action") or "").strip()
+
+                        if not name:
+                            self._send_json(400, {"error": "Body must include non-empty name"})
+                            return
+
+                        if not action:
+                            self._send_json(400, {"error": "Body must include non-empty action"})
+                            return
+
+                        if server.manual_sfx_callback is None:
+                            self._send_json(500, {"error": "manual sfx callback not configured"})
+                            return
+
+                        result = server.manual_sfx_callback(name, action)
+
+                        if not isinstance(result, dict):
+                            self._send_json(500, {"error": "manual sfx callback must return an object"})
+                            return
+
+                        if not result.get("ok"):
+                            self._send_json(400, result)
+                            return
+
+                        self._send_json(200, result)
+                        return
+
                     self._not_found()
 
                 except ValueError as e:

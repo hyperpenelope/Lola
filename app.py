@@ -16,6 +16,7 @@ from droner import Droner
 from fireflight import Fireflight
 from folier import Folier
 from http_server import HttpServer
+from manual_sfx import ManualSfx
 from models import Utterance, TranscriptEvent
 from playback import PlaybackEngine
 from speech import SpeechDetector
@@ -49,6 +50,7 @@ class App:
             self.comms,
             generator_factory=self.build_visual_generator,
         )
+        self.manual_sfx = ManualSfx(self.config, self.comms)
 
         self.http = HttpServer(
             self.config,
@@ -58,7 +60,8 @@ class App:
             stop_callback=self.stop,
             presets_dir=presets_dir,
             base_dir=Path(__file__).parent,
-            utterance_callback=self.submit_text_utterance
+            utterance_callback=self.submit_text_utterance,
+            manual_sfx_callback=self.manual_sfx.control,
         )
 
         self._http_thread: Optional[threading.Thread] = None
@@ -72,6 +75,7 @@ class App:
             "droner": False,
             "folier": False,
             "visual": False,
+            "manual_sfx": False,
         }
         self.visual_enabled = bool(visual_enabled)
         self.droner = Droner(self.config, self.comms)
@@ -154,6 +158,9 @@ class App:
         self.droner.start()
         self._started["droner"] = True
 
+        self.manual_sfx.start()
+        self._started["manual_sfx"] = True
+
     def stop(self) -> None:
         with self._lock:
             if not self._running:
@@ -194,6 +201,11 @@ class App:
             self.http.stop()
         except Exception as e:
             print(f"[APP] Error stopping http: {e}")
+
+        try:
+            self.manual_sfx.stop()
+        except Exception as e:
+            print(f"[APP] Error stopping manual_sfx: {e}")
 
         try:
             pyglet.app.exit()

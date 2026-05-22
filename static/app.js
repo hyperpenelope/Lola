@@ -241,6 +241,32 @@ let folierLinesSectionEl = null;
 let folierLinesListEl = null;
 let folierLinesCountEl = null;
 
+const manualSfxEl = document.querySelector("#manualSfx");
+
+const manualSfxItems = [
+  {
+    name: "thunder",
+    title: "Thunder",
+    note: "One-shot impact. No loop."
+  },
+  {
+    name: "rain",
+    title: "Rain",
+    note: "Can be triggered once or loop continuously."
+  },
+  {
+    name: "wind",
+    title: "Wind",
+    note: "Can be triggered once or loop continuously."
+  }
+];
+
+const manualSfxState = {
+  thunder: { looping: false },
+  rain: { looping: false },
+  wind: { looping: false }
+};
+
 const state = {};
 const initial = {};
 const cards = new Map();
@@ -836,7 +862,9 @@ function scheduleSend(action, payload) {
 
 function showPayload(payload) {
   lastPayload = payload;
-  payloadEl.textContent = JSON.stringify(payload, null, 2);
+  if (payloadEl) {
+    payloadEl.textContent = JSON.stringify(payload, null, 2);
+  }
 }
 
 async function apiFetch(path, options = {}) {
@@ -1185,11 +1213,6 @@ async function refreshStatus() {
   }
 }
 
-function copyPayload() {
-  const text = payloadEl.textContent;
-  navigator.clipboard?.writeText(text);
-  toast("Payload copied");
-}
 
 function toast(message) {
   const item = document.createElement("div");
@@ -1211,7 +1234,6 @@ function wireEvents() {
     await pullConfig();
   });
   document.querySelector("#resetBtn").addEventListener("click", resetAll);
-  document.querySelector("#copyBtn").addEventListener("click", copyPayload);
   document.querySelector("#stopBtn").addEventListener("click", stopApp);
   document.querySelector("#savePresetBtn").addEventListener("click", savePreset);
   document.querySelector("#saveCurrentPresetBtn").addEventListener("click", saveCurrentPreset);
@@ -1261,12 +1283,116 @@ function extractPresetName(payload) {
   );
 }
 
+function renderManualSfx() {
+  if (!manualSfxEl) return;
+
+  manualSfxEl.innerHTML = "";
+
+  manualSfxItems.forEach(item => {
+    const card = document.createElement("article");
+    card.className = "manual-sfx-card";
+
+    const loopable = item.name === "rain" || item.name === "wind";
+    const looping = !!manualSfxState[item.name]?.looping;
+
+    card.innerHTML = `
+      <div class="manual-sfx-head">
+        <div>
+          <h4>${item.title}</h4>
+          <p>${item.note}</p>
+        </div>
+      </div>
+      <div class="manual-sfx-actions"></div>
+    `;
+
+    const actions = card.querySelector(".manual-sfx-actions");
+
+    const onceBtn = document.createElement("button");
+    onceBtn.className = "secondary small";
+    onceBtn.type = "button";
+    onceBtn.textContent = "Play once";
+    onceBtn.addEventListener("click", async () => {
+      await triggerManualSfx(item.name);
+    });
+    actions.appendChild(onceBtn);
+
+    if (loopable) {
+      const loopBtn = document.createElement("button");
+      loopBtn.className = `primary small${looping ? " active" : ""}`;
+      loopBtn.type = "button";
+      loopBtn.textContent = looping ? "Looping on" : "Loop";
+      loopBtn.addEventListener("click", async () => {
+        await toggleManualSfxLoop(item.name);
+      });
+      actions.appendChild(loopBtn);
+
+      const stopBtn = document.createElement("button");
+      stopBtn.className = "secondary small";
+      stopBtn.type = "button";
+      stopBtn.textContent = "Stop";
+      stopBtn.disabled = !looping;
+      stopBtn.addEventListener("click", async () => {
+        await stopManualSfxLoop(item.name);
+      });
+      actions.appendChild(stopBtn);
+    }
+
+    manualSfxEl.appendChild(card);
+  });
+}
+
+async function sendManualSfx(name, action) {
+  try {
+    await apiFetch("/manual-sfx", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, action })
+    });
+
+    setStatus("Connected", true);
+    document.querySelector("#lastSync").textContent = new Date().toLocaleTimeString();
+    return true;
+  } catch (error) {
+    setStatus("Endpoint unavailable", false);
+    toast(error.message);
+    return false;
+  }
+}
+
+async function triggerManualSfx(name) {
+  const ok = await sendManualSfx(name, "trigger_once");
+  if (!ok) return;
+
+  toast(`${name} triggered`);
+}
+
+async function toggleManualSfxLoop(name) {
+  const looping = !!manualSfxState[name]?.looping;
+  const action = looping ? "loop_off" : "loop_on";
+
+  const ok = await sendManualSfx(name, action);
+  if (!ok) return;
+
+  manualSfxState[name].looping = !looping;
+  renderManualSfx();
+  toast(`${name} ${manualSfxState[name].looping ? "loop on" : "loop off"}`);
+}
+
+async function stopManualSfxLoop(name) {
+  const ok = await sendManualSfx(name, "loop_off");
+  if (!ok) return;
+
+  manualSfxState[name].looping = false;
+  renderManualSfx();
+  toast(`${name} stopped`);
+}
+
 async function init() {
   initState();
   initUi();
   wireEvents();
   updateReadouts();
-
+  renderManualSfx();
   await refreshStatus();
   await loadPresets();
   await pullConfig();
