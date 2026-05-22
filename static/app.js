@@ -150,8 +150,96 @@ const paramGroups = [
       { path: "waver.spawn_jitter", label: "Spawn jitter", type: "range", min: 0, max: 4, step: 0.01, value: 1.0 },
       { path: "waver.update_hz", label: "Update Hz", type: "range", min: 10, max: 240, step: 1, value: 120 }
     ]
-  }
+  },
+  {
+    id: "folier",
+    title: "Folier",
+    note: "Scene SFX scheduler and sample-folder root. Each line uses a folder with the same name under samples_root.",
+    controls: [
+      { path: "folier.enabled", label: "Enabled", type: "boolean", value: false },
+      { path: "folier.tick_sec", label: "Tick seconds", type: "range", min: 0.05, max: 2.0, step: 0.01, value: 0.25, suffix: "s" },
+      { path: "folier.samples_root", label: "Samples root", type: "text", value: "samples" },
+      { path: "folier.activity_per_word", label: "Activity per word", type: "range", min: 0, max: 5, step: 0.01, value: 1.0 },
+      { path: "folier.activity_decay_per_sec", label: "Activity decay / sec", type: "range", min: 0, max: 2, step: 0.01, value: 0.08 },
+      { path: "folier.activity_max", label: "Activity max", type: "range", min: 1, max: 500, step: 1, value: 100.0 }
+    ]
+  },
 ];
+const folierLineDefaults = {
+  name: "new-line",
+  enabled: true,
+  mode: "sporadic",
+  base_epm: 2.0,
+  epm_per_activity: 0.0,
+  max_polyphony: 1,
+  gain_min: 0.15,
+  gain_max: 0.30,
+  gain_per_activity: 0.0,
+  rate_min: 0.95,
+  rate_max: 1.05,
+  rate_per_activity: 0.0,
+  lowpass_hz: 0.0,
+  lowpass_per_activity: 0.0,
+  highpass_hz: 0.0,
+  highpass_per_activity: 0.0,
+  delay_mix: 0.0,
+  delay_mix_per_activity: 0.0,
+  delay_time_min: 0.20,
+  delay_time_max: 0.40,
+  delay_feedback_min: 0.15,
+  delay_feedback_max: 0.35,
+  reverb_mix: 0.0,
+  reverb_mix_per_activity: 0.0,
+  distortion_drive: 0.0,
+  distortion_per_activity: 0.0,
+  min_duration_sec: 1.0,
+  max_duration_sec: 4.0
+};
+
+const folierLineFieldDefs = [
+  { key: "name", label: "Line name", type: "text" },
+  { key: "enabled", label: "Enabled", type: "boolean" },
+  { key: "mode", label: "Mode", type: "select", options: ["bed", "sporadic", "clustered"] },
+
+  { key: "base_epm", label: "Base events/min", type: "number", step: 0.01 },
+  { key: "epm_per_activity", label: "Events/min per activity", type: "number", step: 0.01 },
+  { key: "max_polyphony", label: "Max polyphony", type: "number", step: 1, min: 1 },
+
+  { key: "gain_min", label: "Gain min", type: "number", step: 0.01 },
+  { key: "gain_max", label: "Gain max", type: "number", step: 0.01 },
+  { key: "gain_per_activity", label: "Gain per activity", type: "number", step: 0.001 },
+
+  { key: "rate_min", label: "Rate min", type: "number", step: 0.01 },
+  { key: "rate_max", label: "Rate max", type: "number", step: 0.01 },
+  { key: "rate_per_activity", label: "Rate per activity", type: "number", step: 0.001 },
+
+  { key: "lowpass_hz", label: "Lowpass Hz", type: "number", step: 1 },
+  { key: "lowpass_per_activity", label: "Lowpass per activity", type: "number", step: 0.1 },
+  { key: "highpass_hz", label: "Highpass Hz", type: "number", step: 1 },
+  { key: "highpass_per_activity", label: "Highpass per activity", type: "number", step: 0.1 },
+
+  { key: "delay_mix", label: "Delay mix", type: "number", step: 0.01 },
+  { key: "delay_mix_per_activity", label: "Delay mix per activity", type: "number", step: 0.001 },
+  { key: "delay_time_min", label: "Delay time min", type: "number", step: 0.01 },
+  { key: "delay_time_max", label: "Delay time max", type: "number", step: 0.01 },
+  { key: "delay_feedback_min", label: "Delay fb min", type: "number", step: 0.01 },
+  { key: "delay_feedback_max", label: "Delay fb max", type: "number", step: 0.01 },
+
+  { key: "reverb_mix", label: "Reverb mix", type: "number", step: 0.01 },
+  { key: "reverb_mix_per_activity", label: "Reverb mix per activity", type: "number", step: 0.001 },
+
+  { key: "distortion_drive", label: "Distortion drive", type: "number", step: 0.01 },
+  { key: "distortion_per_activity", label: "Distortion per activity", type: "number", step: 0.001 },
+
+  { key: "min_duration_sec", label: "Min duration", type: "number", step: 0.01 },
+  { key: "max_duration_sec", label: "Max duration", type: "number", step: 0.01 }
+];
+
+let folierLines = [];
+let initialFolierLines = [];
+let folierLinesSectionEl = null;
+let folierLinesListEl = null;
+let folierLinesCountEl = null;
 
 const state = {};
 const initial = {};
@@ -255,6 +343,293 @@ function initState() {
   });
 }
 
+function deepCloneJson(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function toFiniteNumber(value, fallback = 0) {
+  const n = Number(value);
+  return Number.isFinite(n) ? n : fallback;
+}
+
+function normalizeFolierLine(line = {}, index = 0) {
+  return {
+    ...deepCloneJson(folierLineDefaults),
+    ...line,
+    name: String(line.name || `line-${index + 1}`).trim() || `line-${index + 1}`,
+    enabled: line.enabled !== false,
+    mode: ["bed", "sporadic", "clustered"].includes(String(line.mode || "")) ? String(line.mode) : "sporadic",
+    base_epm: toFiniteNumber(line.base_epm, folierLineDefaults.base_epm),
+    epm_per_activity: toFiniteNumber(line.epm_per_activity, folierLineDefaults.epm_per_activity),
+    max_polyphony: Math.max(1, Math.round(toFiniteNumber(line.max_polyphony, folierLineDefaults.max_polyphony))),
+    gain_min: toFiniteNumber(line.gain_min, folierLineDefaults.gain_min),
+    gain_max: toFiniteNumber(line.gain_max, folierLineDefaults.gain_max),
+    gain_per_activity: toFiniteNumber(line.gain_per_activity, folierLineDefaults.gain_per_activity),
+    rate_min: toFiniteNumber(line.rate_min, folierLineDefaults.rate_min),
+    rate_max: toFiniteNumber(line.rate_max, folierLineDefaults.rate_max),
+    rate_per_activity: toFiniteNumber(line.rate_per_activity, folierLineDefaults.rate_per_activity),
+    lowpass_hz: toFiniteNumber(line.lowpass_hz, folierLineDefaults.lowpass_hz),
+    lowpass_per_activity: toFiniteNumber(line.lowpass_per_activity, folierLineDefaults.lowpass_per_activity),
+    highpass_hz: toFiniteNumber(line.highpass_hz, folierLineDefaults.highpass_hz),
+    highpass_per_activity: toFiniteNumber(line.highpass_per_activity, folierLineDefaults.highpass_per_activity),
+    delay_mix: toFiniteNumber(line.delay_mix, folierLineDefaults.delay_mix),
+    delay_mix_per_activity: toFiniteNumber(line.delay_mix_per_activity, folierLineDefaults.delay_mix_per_activity),
+    delay_time_min: toFiniteNumber(line.delay_time_min, folierLineDefaults.delay_time_min),
+    delay_time_max: toFiniteNumber(line.delay_time_max, folierLineDefaults.delay_time_max),
+    delay_feedback_min: toFiniteNumber(line.delay_feedback_min, folierLineDefaults.delay_feedback_min),
+    delay_feedback_max: toFiniteNumber(line.delay_feedback_max, folierLineDefaults.delay_feedback_max),
+    reverb_mix: toFiniteNumber(line.reverb_mix, folierLineDefaults.reverb_mix),
+    reverb_mix_per_activity: toFiniteNumber(line.reverb_mix_per_activity, folierLineDefaults.reverb_mix_per_activity),
+    distortion_drive: toFiniteNumber(line.distortion_drive, folierLineDefaults.distortion_drive),
+    distortion_per_activity: toFiniteNumber(line.distortion_per_activity, folierLineDefaults.distortion_per_activity),
+    min_duration_sec: toFiniteNumber(line.min_duration_sec, folierLineDefaults.min_duration_sec),
+    max_duration_sec: toFiniteNumber(line.max_duration_sec, folierLineDefaults.max_duration_sec)
+  };
+}
+
+function serializeFolierLine(line, index = 0) {
+  return normalizeFolierLine(line, index);
+}
+
+function setFolierLines(lines, syncInitial = false) {
+  folierLines = Array.isArray(lines)
+    ? lines.map((line, index) => normalizeFolierLine(line, index))
+    : [];
+
+  if (syncInitial) {
+    initialFolierLines = deepCloneJson(folierLines);
+  }
+
+  renderFolierLines();
+}
+
+function folierSamplesRoot() {
+  return String(state["folier.samples_root"] || "samples/folier");
+}
+
+function makeFolierLineSearchText(line) {
+  return `folier ${line.name} ${line.mode} ${folierSamplesRoot()}/${line.name}`.toLowerCase();
+}
+
+function createFolierLinesSection() {
+  const navLink = document.createElement("a");
+  navLink.href = "#folier-lines";
+  navLink.innerHTML = `<span>Folier Lines</span><span id="folierLinesCount">0</span>`;
+  navEl.appendChild(navLink);
+
+  const section = document.createElement("section");
+  section.className = "group";
+  section.id = "folier-lines";
+  section.innerHTML = `
+    <div class="group-head">
+      <div>
+        <h3>Folier Lines</h3>
+        <p>Each line uses samples from <code>folier.samples_root/&lt;line-name&gt;/</code>.</p>
+      </div>
+      <div class="line-toolbar">
+        <button id="addFolierLineBtn" class="primary small" type="button">Add line</button>
+      </div>
+    </div>
+    <div id="folierLinesList" class="folier-lines-list"></div>
+  `;
+
+  controlsEl.appendChild(section);
+
+  folierLinesSectionEl = section;
+  folierLinesListEl = section.querySelector("#folierLinesList");
+  folierLinesCountEl = navLink.querySelector("#folierLinesCount");
+
+  section.querySelector("#addFolierLineBtn").addEventListener("click", () => {
+    addFolierLine();
+  });
+}
+
+function createFolierField(field, line, index, card) {
+  const wrap = document.createElement("label");
+  wrap.className = "line-field";
+
+  const title = document.createElement("span");
+  title.textContent = field.label;
+  wrap.appendChild(title);
+
+  if (field.type === "boolean") {
+    const toggle = document.createElement("label");
+    toggle.className = "toggle";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.checked = !!line[field.key];
+    input.addEventListener("change", () => {
+      folierLines[index][field.key] = input.checked;
+      onFolierLinesChanged(`folier.lines.${index}.${field.key}`);
+    });
+
+    const text = document.createElement("span");
+    text.textContent = "Enabled";
+
+    toggle.append(input, text);
+    wrap.appendChild(toggle);
+    return wrap;
+  }
+
+  let input;
+  if (field.type === "select") {
+    input = document.createElement("select");
+    field.options.forEach(option => {
+      const opt = document.createElement("option");
+      opt.value = option;
+      opt.textContent = option;
+      input.appendChild(opt);
+    });
+    input.value = line[field.key];
+    input.addEventListener("change", () => {
+      folierLines[index][field.key] = input.value;
+      card.dataset.search = makeFolierLineSearchText(folierLines[index]);
+      onFolierLinesChanged(`folier.lines.${index}.${field.key}`);
+    });
+  } else {
+    input = document.createElement("input");
+    input.type = field.type === "number" ? "number" : "text";
+    if (field.min !== undefined) input.min = field.min;
+    if (field.max !== undefined) input.max = field.max;
+    input.step = field.step ?? (field.type === "number" ? "any" : "");
+    input.value = line[field.key];
+
+    input.addEventListener("input", () => {
+      let nextValue = input.value;
+      if (field.type === "number") {
+        nextValue = toFiniteNumber(input.value, folierLineDefaults[field.key] ?? 0);
+      }
+
+      folierLines[index][field.key] = nextValue;
+
+      if (field.key === "name" || field.key === "mode") {
+        card.dataset.search = makeFolierLineSearchText(folierLines[index]);
+
+        const titleEl = card.querySelector(".folier-line-title");
+        if (titleEl) titleEl.textContent = folierLines[index].name;
+
+        const folderEl = card.querySelector(".folier-line-folder");
+        if (folderEl) folderEl.textContent = `${folierSamplesRoot()}/${folierLines[index].name}/`;
+      }
+
+      onFolierLinesChanged(`folier.lines.${index}.${field.key}`);
+    });
+  }
+
+  wrap.appendChild(input);
+  return wrap;
+}
+
+function createFolierLineCard(line, index) {
+  const card = document.createElement("article");
+  card.className = "control folier-line-card";
+  card.dataset.search = makeFolierLineSearchText(line);
+
+  const head = document.createElement("div");
+  head.className = "control-head";
+  head.innerHTML = `
+    <div>
+      <h4 class="folier-line-title">${line.name}</h4>
+      <p class="folier-line-folder">${folierSamplesRoot()}/${line.name}/</p>
+    </div>
+  `;
+
+  const removeBtn = document.createElement("button");
+  removeBtn.className = "secondary small";
+  removeBtn.type = "button";
+  removeBtn.textContent = "Remove";
+  removeBtn.addEventListener("click", () => {
+    removeFolierLine(index);
+  });
+
+  head.appendChild(removeBtn);
+  card.appendChild(head);
+
+  const grid = document.createElement("div");
+  grid.className = "line-grid";
+
+  folierLineFieldDefs.forEach(field => {
+    grid.appendChild(createFolierField(field, line, index, card));
+  });
+
+  card.appendChild(grid);
+  return card;
+}
+
+function renderFolierLines() {
+  if (!folierLinesListEl) return;
+
+  folierLinesListEl.innerHTML = "";
+  if (folierLinesCountEl) {
+    folierLinesCountEl.textContent = String(folierLines.length);
+  }
+
+  if (!folierLines.length) {
+    const empty = document.createElement("article");
+    empty.className = "control";
+    empty.innerHTML = `<p>No Folier lines yet. Add one to start building the scene soundscape.</p>`;
+    folierLinesListEl.appendChild(empty);
+    return;
+  }
+
+  folierLines.forEach((line, index) => {
+    folierLinesListEl.appendChild(createFolierLineCard(line, index));
+  });
+}
+
+function onFolierLinesChanged(reason = "folier.lines") {
+  const payload = {
+    source: "control-panel",
+    timestamp: new Date().toISOString(),
+    request: "config/set",
+    key: "folier.lines",
+    reason,
+    value: folierLines.map((line, index) => serializeFolierLine(line, index))
+  };
+
+  showPayload(payload);
+
+  if (document.querySelector("#autoSend").checked) {
+    scheduleSend(sendFolierLines, payload);
+  }
+}
+
+function addFolierLine() {
+  const nextIndex = folierLines.length + 1;
+  folierLines.push(normalizeFolierLine({ name: `line-${nextIndex}` }, nextIndex - 1));
+  renderFolierLines();
+  onFolierLinesChanged("folier.lines.add");
+}
+
+function removeFolierLine(index) {
+  folierLines.splice(index, 1);
+  renderFolierLines();
+  onFolierLinesChanged("folier.lines.remove");
+}
+
+async function sendFolierLines() {
+  try {
+    const payload = {
+      key: "folier.lines",
+      value: folierLines.map((line, index) => serializeFolierLine(line, index))
+    };
+
+    await apiFetch("/config/set", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    setStatus("Connected", true);
+    document.querySelector("#lastSync").textContent = new Date().toLocaleTimeString();
+    toast("Folier lines updated");
+  } catch (error) {
+    setStatus("Endpoint unavailable", false);
+    toast(error.message);
+  }
+}
+
 function initUi() {
   paramGroups.forEach(group => {
     const navLink = document.createElement("a");
@@ -283,6 +658,9 @@ function initUi() {
 
     controlsEl.appendChild(section);
   });
+
+  createFolierLinesSection();
+  renderFolierLines();
 }
 
 function createControl(control) {
@@ -511,6 +889,8 @@ async function sendSingle(path, value) {
 
 async function sendAll() {
   const values = nestedObjectFromState(state);
+  values.folier = values.folier || {};
+  values.folier.lines = folierLines.map((line, index) => serializeFolierLine(line, index));
   const payload = {
     source: "control-panel",
     timestamp: new Date().toISOString(),
@@ -582,6 +962,9 @@ function applyBackendConfig(config, syncInitial = true) {
       applyStateValue(path, value, syncInitial);
     }
   });
+
+  const backendLines = Array.isArray(config?.folier?.lines) ? config.folier.lines : [];
+  setFolierLines(backendLines, syncInitial);
 
   updateReadouts();
 }
@@ -721,6 +1104,8 @@ function resetAll() {
   Object.entries(initial).forEach(([path, value]) => {
     applyStateValue(path, value, false);
   });
+
+  setFolierLines(initialFolierLines, false);
 
   updateReadouts();
 
