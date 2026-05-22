@@ -267,6 +267,9 @@ const manualSfxState = {
   wind: { looping: false }
 };
 
+const panelUtteranceTextEl = document.querySelector("#panelUtteranceText");
+const sendPanelUtteranceBtn = document.querySelector("#sendPanelUtteranceBtn");
+
 const state = {};
 const initial = {};
 const cards = new Map();
@@ -1247,6 +1250,19 @@ function wireEvents() {
     await loadPresets();
     await pullConfig();
   });
+  if (sendPanelUtteranceBtn) {
+    sendPanelUtteranceBtn.addEventListener("click", sendPanelUtterance);
+  }
+  
+
+  if (panelUtteranceTextEl) {
+    panelUtteranceTextEl.addEventListener("keydown", event => {
+      if ((event.metaKey || event.ctrlKey) && event.key === "Enter") {
+        event.preventDefault();
+        sendPanelUtterance();
+      }
+    });
+  }
 }
 
 function setSelectedPreset(name) {
@@ -1339,6 +1355,37 @@ function renderManualSfx() {
 
     manualSfxEl.appendChild(card);
   });
+}
+
+async function sendPanelUtterance() {
+  const text = (panelUtteranceTextEl?.value || "").trim();
+
+  if (!text) {
+    toast("Enter some text first");
+    return;
+  }
+
+  try {
+    await apiFetch("/utterance", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text })
+    });
+
+    setStatus("Connected", true);
+    document.querySelector("#lastSync").textContent = new Date().toLocaleTimeString();
+    toast("Utterance sent");
+  } catch (error) {
+    setStatus("Endpoint unavailable", false);
+    toast(error.message);
+  }
+}
+
+function clearPanelUtterance() {
+  if (panelUtteranceTextEl) {
+    panelUtteranceTextEl.value = "";
+    panelUtteranceTextEl.focus();
+  }
 }
 
 async function sendManualSfx(name, action) {
