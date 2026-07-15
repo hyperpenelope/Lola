@@ -1,20 +1,20 @@
 #N canvas 48 27 2000 1094 10;
 #X obj 11 18 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-1 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 26 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-2 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 34 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-3 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 42 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-4 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 50 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-5 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 58 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-6 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 66 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-7 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 74 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-8 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 82 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-9 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 11 90 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-10 empty -2 -8
@@ -488,13 +488,9 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 3175 1;
 empty 0 -9 0 10 #fcfcfc #000000 #000000 317 1;
 #X floatatom 490 490 5 0 0 1 ms g26-#0-adsr-rel -, f 5;
 #X text 250 510 Peak;
-#N canvas 624 339 1261 736 selector 0;
-#X obj 280 99 soundfiler;
-#X obj 285 172 /;
-#X obj 280 118 t b f;
-#X obj 280 137 samplerate~;
+#N canvas 624 338 1262 737 selector 0;
+#X obj 280 129 soundfiler;
 #X obj 210 20 inlet;
-#X floatatom 280 210 6 0 0 0 - - -, f 6;
 #X obj 580 20 inlet;
 #X msg 580 150 1;
 #X msg 740 160 0;
@@ -513,38 +509,34 @@ sample, f 16;
 #X obj 120 100 s g26-\$0-grain;
 #X obj 121 215 s g26-\$0-size-in-samples;
 #X obj 210 340 s g26-\$0-selector-display;
-#X obj 350 120 s g26-\$0-size-in-samples;
-#X obj 359 188 s g26-\$0-speed-in-hz;
+#X obj 350 150 s g26-\$0-size-in-samples;
 #X obj 590 88 tabplay~ g26-\$0-grain;
 #X obj 590 120 s~ g26-\$0-preview-audio;
 #X obj 580 181 s g26-\$0-preview-auto;
-#X msg 280 80 read -resize samples/sample\$1.wav g26-\$0-grain;
-#X connect 0 0 2 0;
-#X connect 0 0 23 0;
+#X obj 280 90 pack f \$0;
+#X msg 280 110 read -resize samples/sample\$1.wav g26-\$2-grain;
+#X connect 0 0 19 0;
+#X connect 1 0 8 0;
 #X connect 2 0 3 0;
-#X connect 2 1 1 1;
-#X connect 3 0 1 0;
-#X connect 3 0 5 0;
-#X connect 4 0 12 0;
-#X connect 6 0 7 0;
-#X connect 6 0 10 0;
-#X connect 7 0 27 0;
-#X connect 8 0 27 0;
-#X connect 9 0 11 0;
-#X connect 10 0 25 0;
-#X connect 11 0 8 0;
-#X connect 12 0 14 0;
-#X connect 12 0 15 0;
-#X connect 12 0 16 0;
-#X connect 12 1 28 0;
-#X connect 12 1 13 0;
-#X connect 13 0 22 0;
-#X connect 14 0 22 0;
-#X connect 15 0 20 0;
-#X connect 16 0 21 0;
-#X connect 25 0 26 0;
-#X connect 25 1 11 0;
-#X connect 28 0 0 0;
+#X connect 2 0 6 0;
+#X connect 3 0 22 0;
+#X connect 4 0 22 0;
+#X connect 5 0 7 0;
+#X connect 6 0 20 0;
+#X connect 7 0 4 0;
+#X connect 8 0 10 0;
+#X connect 8 0 11 0;
+#X connect 8 0 12 0;
+#X connect 8 1 9 0;
+#X connect 8 1 23 0;
+#X connect 9 0 18 0;
+#X connect 10 0 18 0;
+#X connect 11 0 16 0;
+#X connect 12 0 17 0;
+#X connect 20 0 21 0;
+#X connect 20 1 7 0;
+#X connect 23 0 24 0;
+#X connect 24 0 0 0;
 #X restore 780 50 pd selector;
 #X symbolatom 220 60 17 0 0 2 Filename g26-#0-selector-display -,
 f 17;
