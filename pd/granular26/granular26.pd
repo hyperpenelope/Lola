@@ -1,136 +1,136 @@
 #N canvas 48 27 2000 1094 10;
-#X obj 11 18 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-1 empty -2 -8
-0 10 #fcfcfc #000000 #000000 9700 1;
-#X obj 11 26 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-2 empty -2 -8
+#X obj 11 8 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-1 empty -2 -8 0
+10 #fcfcfc #000000 #000000 9700 1;
+#X obj 11 16 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-2 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 34 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-3 empty -2 -8
+#X obj 11 24 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-3 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 42 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-4 empty -2 -8
+#X obj 11 32 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-4 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 50 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-5 empty -2 -8
+#X obj 11 40 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-5 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 58 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-6 empty -2 -8
+#X obj 11 48 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-6 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 66 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-7 empty -2 -8
+#X obj 11 56 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-7 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 74 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-8 empty -2 -8
+#X obj 11 64 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-8 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 82 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-9 empty -2 -8
+#X obj 11 72 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-9 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 90 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-10 empty -2 -8
+#X obj 11 80 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-10 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 98 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-11 empty -2 -8
+#X obj 11 88 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-11 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 106 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-12 empty -2 -8
+#X obj 11 96 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-12 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 114 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-13 empty -2 -8
+#X obj 11 104 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-13 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 122 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-14 empty -2 -8
+#X obj 11 112 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-14 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 130 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-15 empty -2 -8
+#X obj 11 120 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-15 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 138 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-16 empty -2 -8
+#X obj 11 128 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-16 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 146 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-17 empty -2 -8
+#X obj 11 136 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-17 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 154 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-18 empty -2 -8
+#X obj 11 144 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-18 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 162 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-19 empty -2 -8
+#X obj 11 152 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-19 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 170 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-20 empty -2 -8
+#X obj 11 160 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-20 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 178 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-21 empty -2 -8
+#X obj 11 168 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-21 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 186 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-22 empty -2 -8
+#X obj 11 176 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-22 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 194 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-23 empty -2 -8
+#X obj 11 184 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-23 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 202 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-24 empty -2 -8
+#X obj 11 192 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-24 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 210 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-25 empty -2 -8
+#X obj 11 200 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-25 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 218 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-26 empty -2 -8
+#X obj 11 208 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-26 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 226 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-27 empty -2 -8
+#X obj 11 216 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-27 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 234 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-28 empty -2 -8
+#X obj 11 224 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-28 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 242 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-29 empty -2 -8
+#X obj 11 232 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-29 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 250 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-30 empty -2 -8
+#X obj 11 240 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-30 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 258 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-31 empty -2 -8
+#X obj 11 248 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-31 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 266 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-32 empty -2 -8
+#X obj 11 256 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-32 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 274 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-33 empty -2 -8
+#X obj 11 264 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-33 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 282 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-34 empty -2 -8
+#X obj 11 272 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-34 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 290 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-35 empty -2 -8
+#X obj 11 280 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-35 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 298 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-36 empty -2 -8
+#X obj 11 288 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-36 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 306 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-37 empty -2 -8
+#X obj 11 296 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-37 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 314 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-38 empty -2 -8
+#X obj 11 304 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-38 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 322 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-39 empty -2 -8
+#X obj 11 312 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-39 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 330 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-40 empty -2 -8
+#X obj 11 320 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-40 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 338 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-41 empty -2 -8
+#X obj 11 328 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-41 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 346 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-42 empty -2 -8
+#X obj 11 336 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-42 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 354 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-43 empty -2 -8
+#X obj 11 344 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-43 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 362 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-44 empty -2 -8
+#X obj 11 352 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-44 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 370 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-45 empty -2 -8
+#X obj 11 360 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-45 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 378 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-46 empty -2 -8
+#X obj 11 368 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-46 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 386 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-47 empty -2 -8
+#X obj 11 376 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-47 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 394 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-48 empty -2 -8
+#X obj 11 384 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-48 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 402 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-49 empty -2 -8
+#X obj 11 392 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-49 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 410 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-50 empty -2 -8
+#X obj 11 400 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-50 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 418 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-51 empty -2 -8
+#X obj 11 408 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-51 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 426 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-52 empty -2 -8
+#X obj 11 416 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-52 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 434 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-53 empty -2 -8
+#X obj 11 424 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-53 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 442 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-54 empty -2 -8
+#X obj 11 432 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-54 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 0;
-#X obj 11 450 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-55 empty -2 -8
+#X obj 11 440 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-55 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 458 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-56 empty -2 -8
+#X obj 11 448 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-56 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 466 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-57 empty -2 -8
+#X obj 11 456 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-57 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 474 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-58 empty -2 -8
+#X obj 11 464 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-58 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 482 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-59 empty -2 -8
+#X obj 11 472 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-59 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 490 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-60 empty -2 -8
+#X obj 11 480 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-60 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 498 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-61 empty -2 -8
+#X obj 11 488 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-61 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 506 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-62 empty -2 -8
+#X obj 11 496 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-62 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 514 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-63 empty -2 -8
+#X obj 11 504 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-63 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 11 522 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-64 empty -2 -8
+#X obj 11 512 hsl 195 8 0 1 0 0 empty g26-\$0-r-grain-64 empty -2 -8
 0 10 #fcfcfc #000000 #000000 0 1;
 #N canvas 797 450 454 282 (subpatch) 0;
 #X array g26-\$0-grain 69407 float 0 black black;
 #X coords 0 1 69406 -1 200 512 1;
-#X restore 8 18 graph;
+#X restore 8 8 graph;
 #N canvas 104 27 1818 1029 window-functions 0;
 #X obj 180 340 phasor~ 1;
 #X obj 329 186 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -290,11 +290,11 @@
 #X connect 31 0 32 0;
 #X connect 32 0 0 1;
 #X coords 0 -1 1 1 70 14 2 200 100;
-#X restore 220 222 pd window-functions;
+#X restore 220 212 pd window-functions;
 #N canvas 798 466 452 251 (subpatch) 0;
 #X array g26-\$0-grain-window 48000 float 4 black black;
 #X coords 0 1 47999 0 70 50 1;
-#X restore 220 170 graph;
+#X restore 220 160 graph;
 #N canvas 1120 84 771 623 test-prev 0;
 #X obj 50 290 outlet~;
 #X obj 240 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -358,9 +358,9 @@ the first stereo input and boost the second \; vice versa if it receives
 #X connect 7 0 6 0;
 #X connect 8 0 1 0;
 #X restore 20 890 pd test-prev;
-#X obj 440 30 bng 14 250 50 0 empty empty Preview 0 -10 0 10 #fcfcfc
+#X obj 440 20 bng 14 250 50 0 empty empty Preview 0 -10 0 10 #fcfcfc
 #000000 #000000;
-#X obj 440 60 bng 14 250 50 0 empty empty Stop\\\ Prvw 0 -10 0 10 #fcfcfc
+#X obj 440 50 bng 14 250 50 0 empty empty Stop\\\ Prvw 0 -10 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 1190 27 858 1094 info 0;
 #X text 10 80 Based on Jakob Skouborg's Granular21 patch: https://github.com/jaffasplaffa/Pure-data-patches/tree/master
@@ -379,42 +379,39 @@ will load the file sampleN.wav where N is the number of the button.
 Currently ten samples - sample1.wav throguh sample10.wav - are supported.
 ;
 #X restore 20 940 pd info;
-#X floatatom 500 190 5 1 64 0 - - g26-#0-grain-on, f 5;
-#X obj 360 270 hsl 128 15 1 2048 0 0 g26-\$0-grain-size g26-\$0-grain-size-init
-empty -2 -8 0 10 #fcfcfc #000000 #000000 614 1;
-#X floatatom 500 270 5 0 0 1 ms g26-#0-grain-size -, f 5;
-#X obj 360 290 hsl 128 15 0 100 0 0 g26-\$0-random-pos g26-\$0-random-pos-init
-empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X floatatom 500 290 5 0 0 1 % g26-#0-random-pos -, f 5;
-#X obj 360 250 hsl 128 15 0 100 0 0 g26-\$0-grain-centre g26-\$0-grain-centre-init
-empty -2 -8 0 10 #fcfcfc #000000 #000000 6350 1;
-#X floatatom 500 250 5 0 0 1 % g26-#0-grain-centre -, f 5;
-#X obj 220 30 hradio 15 0 0 13 empty g26-\$0-sample-selector-init Select\\\ Sample
+#X floatatom 500 180 5 1 64 0 - - g26-#0-grain-on, f 5;
+#X obj 220 280 hsl 128 15 1 2048 0 0 g26-\$0-grain-size g26-\$0-grain-size-init
+Grain\\\ size -2 -8 0 10 #fcfcfc #000000 #000000 614 1;
+#X floatatom 360 280 5 0 0 1 ms g26-#0-grain-size -, f 5;
+#X obj 220 310 hsl 128 15 0 100 0 0 g26-\$0-random-pos g26-\$0-random-pos-init
+Random\\\ position\\\ radius -2 -8 0 10 #fcfcfc #000000 #000000 0 1
+;
+#X floatatom 360 310 5 0 0 1 % g26-#0-random-pos -, f 5;
+#X obj 220 250 hsl 128 15 0 100 0 0 g26-\$0-grain-cntr-base g26-\$0-grain-cntr-base-init
+Grain\\\ centre -2 -8 0 10 #fcfcfc #000000 #000000 6350 1;
+#X floatatom 360 250 5 0 0 1 % g26-#0-grain-cntr-base -, f 5;
+#X obj 220 20 hradio 15 0 0 13 empty g26-\$0-sample-selector-init Select\\\ Sample
 0 -10 0 10 #fcfcfc #000000 #000000 0;
 #X msg 780 210 8;
 #X msg 810 210 16;
 #X msg 750 250 32;
 #X msg 780 250 64;
-#X text 360 150 # of grains:;
-#X obj 390 740 loadbang;
-#X msg 280 820 0;
-#X obj 410 220 tgl 15 0 g26-\$0-reverse g26-\$0-reverse-init empty
+#X text 360 140 # of grains:;
+#X obj 60 1000 loadbang;
+#X msg 60 1080 0;
+#X obj 410 210 tgl 15 0 g26-\$0-reverse g26-\$0-reverse-init empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X text 360 220 Reverse;
+#X text 360 210 Reverse;
 #X obj 780 170 loadbang;
-#X msg 830 820 100;
-#X msg 660 820 50;
-#X obj 360 310 hsl 128 15 0 100 0 0 g26-\$0-pan-spray g26-\$0-pan-spray-init
-empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X floatatom 500 310 5 0 0 1 % g26-#0-pan-spray -, f 5;
-#X text 220 310 Pan spray;
+#X msg 630 1080 100;
+#X msg 440 1080 50;
+#X obj 220 340 hsl 128 15 0 100 0 0 g26-\$0-pan-spray g26-\$0-pan-spray-init
+Pan\\\ spray -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 360 340 5 0 0 1 % g26-#0-pan-spray -, f 5;
 #X floatatom 250 490 5 0 0 1 % g26-#0-adsr-peak -, f 5;
-#X msg 510 820 25;
-#X text 220 250 Grain centre;
-#X text 220 270 Grain size;
-#X text 220 290 Random position range;
-#X obj 260 350 vsl 15 128 0 100 0 0 g26-\$0-adsr-peak g26-\$0-adsr-peak-init
-empty 0 -9 0 10 #fcfcfc #000000 #000000 3175 1;
+#X msg 290 1080 25;
+#X obj 260 380 vsl 15 100 0 100 0 0 g26-\$0-adsr-peak g26-\$0-adsr-peak-init
+empty 0 -9 0 10 #fcfcfc #000000 #000000 2475 1;
 #N canvas 1104 27 944 1094 midi-adsr 0;
 #X obj 140 320 adsr~;
 #X obj 39 130 inlet~;
@@ -471,21 +468,21 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 3175 1;
 #X connect 20 0 0 4;
 #X connect 21 0 0 5;
 #X restore 20 840 pd midi-adsr;
-#X obj 320 350 vsl 15 128 0 1000 0 0 g26-\$0-adsr-att g26-\$0-adsr-att-init
-empty 0 -9 0 10 #fcfcfc #000000 #000000 1270 1;
+#X obj 320 380 vsl 15 100 0 1000 0 0 g26-\$0-adsr-att g26-\$0-adsr-att-init
+empty 0 -9 0 10 #fcfcfc #000000 #000000 990 1;
 #X text 440 510 S;
 #X text 320 510 A;
 #X text 380 510 D;
 #X text 500 510 R;
 #X floatatom 310 490 5 0 0 1 ms g26-#0-adsr-att -, f 5;
-#X obj 380 350 vsl 15 128 0 1000 0 0 g26-\$0-adsr-dec g26-\$0-adsr-dec-init
-empty 0 -9 0 10 #fcfcfc #000000 #000000 635 1;
+#X obj 380 380 vsl 15 100 0 1000 0 0 g26-\$0-adsr-dec g26-\$0-adsr-dec-init
+empty 0 -9 0 10 #fcfcfc #000000 #000000 495 1;
 #X floatatom 370 490 5 0 0 1 ms g26-#0-adsr-dec -, f 5;
-#X obj 440 350 vsl 15 128 0 100 0 0 g26-\$0-adsr-sus g26-\$0-adsr-sus-init
-empty 0 -9 0 10 #fcfcfc #000000 #000000 3175 1;
+#X obj 440 380 vsl 15 100 0 100 0 0 g26-\$0-adsr-sus g26-\$0-adsr-sus-init
+empty 0 -9 0 10 #fcfcfc #000000 #000000 2475 1;
 #X floatatom 430 490 5 0 0 1 % g26-#0-adsr-sus -, f 5;
-#X obj 500 350 vsl 15 128 0 4000 0 0 g26-\$0-adsr-rel g26-\$0-adsr-rel-init
-empty 0 -9 0 10 #fcfcfc #000000 #000000 317 1;
+#X obj 500 380 vsl 15 100 0 4000 0 0 g26-\$0-adsr-rel g26-\$0-adsr-rel-init
+empty 0 -9 0 10 #fcfcfc #000000 #000000 247 1;
 #X floatatom 490 490 5 0 0 1 ms g26-#0-adsr-rel -, f 5;
 #X text 250 510 Peak;
 #N canvas 624 338 1262 737 selector 0;
@@ -538,15 +535,14 @@ sample, f 16;
 #X connect 23 0 24 0;
 #X connect 24 0 0 0;
 #X restore 780 50 pd selector;
-#X symbolatom 220 60 17 0 0 2 Filename g26-#0-selector-display -,
+#X symbolatom 220 50 17 0 0 2 Filename g26-#0-selector-display -,
 f 17;
-#X text 220 150 Grain window:;
-#X obj 220 100 hradio 15 0 0 12 empty g26-\$0-sample-note-init Note/Octave
+#X text 220 140 Grain window:;
+#X obj 220 90 hradio 15 0 0 12 empty g26-\$0-sample-note-init Note/Octave
 0 -10 0 10 #fcfcfc #000000 #000000 0;
-#X obj 220 120 hradio 15 0 0 9 empty g26-\$0-sample-octave-init empty
+#X obj 220 110 hradio 15 0 0 9 empty g26-\$0-sample-octave-init empty
 0 -10 0 10 #fcfcfc #000000 #000000 4;
-#X symbolatom 410 100 5 0 0 0 - g26-#0-sample-note-display -, f 5
-;
+#X symbolatom 410 90 5 0 0 0 - g26-#0-sample-note-display -, f 5;
 #N canvas 1076 27 972 1094 tune 0;
 #X obj 50 70 inlet;
 #X obj 290 70 inlet;
@@ -606,19 +602,19 @@ f 17;
 #X connect 19 1 20 1;
 #X connect 20 0 22 0;
 #X restore 780 140 pd tune;
-#X floatatom 410 120 5 0 0 0 - g26-#0-sample-octave -, f 5;
-#X obj 10 590 bng 15 250 50 0 empty empty 2.\\\ Celtic\\\ Darkness
+#X floatatom 410 110 5 0 0 0 - g26-#0-sample-octave -, f 5;
+#X obj 10 580 bng 15 250 50 0 empty empty 2.\\\ Celtic\\\ Darkness
 17 7 0 10 #fcfcfc #000000 #000000;
-#X obj 150 560 bng 15 250 50 0 empty empty 3.\\\ Mid\\\ Sax\\\ v1 17
+#X obj 150 550 bng 15 250 50 0 empty empty 3.\\\ Mid\\\ Sax\\\ v1 17
 7 0 10 #fcfcfc #000000 #000000;
 #X msg 750 210 1;
-#X obj 150 590 bng 15 250 50 0 empty empty 4.\\\ Mid\\\ Sax\\\ v2 17
+#X obj 150 580 bng 15 250 50 0 empty empty 4.\\\ Mid\\\ Sax\\\ v2 17
 7 0 10 #fcfcfc #000000 #000000;
-#X obj 260 560 bng 15 250 50 0 empty empty 5.\\\ Candlelit\\\ Bath
+#X obj 260 550 bng 15 250 50 0 empty empty 5.\\\ Candlelit\\\ Bath
 17 7 0 10 #fcfcfc #000000 #000000;
-#X obj 10 560 bng 15 250 50 0 empty empty 1.\\\ Angelic\\\ Choir 17
+#X obj 10 550 bng 15 250 50 0 empty empty 1.\\\ Angelic\\\ Choir 17
 7 0 10 #fcfcfc #000000 #000000;
-#N canvas 992 421 871 657 preset-1 0;
+#N canvas 992 419 873 659 preset-1 0;
 #X obj 40 -660 inlet;
 #X msg 325 -467 90;
 #X msg 15 -278 1000;
@@ -632,52 +628,59 @@ f 17;
 #X msg 115 -338 60;
 #X msg 85 -318 120;
 #X msg 55 -298 50;
-#X obj 40 -630 t b b b;
 #X obj 405 -558 s g26-\$0-sample-octave-init;
 #X obj 365 -538 s g26-\$0-sample-note-init;
 #X obj 325 -518 s g26-\$0-sample-selector-init;
 #X obj 325 -448 s g26-\$0-pan-spray-init;
 #X obj 275 -427 s g26-\$0-random-pos-init;
 #X obj 225 -407 s g26-\$0-grain-size-init;
-#X obj 185 -387 s g26-\$0-grain-centre-init;
 #X obj 145 -338 s g26-\$0-adsr-peak-init;
 #X obj 115 -318 s g26-\$0-adsr-att-init;
 #X obj 85 -298 s g26-\$0-adsr-dec-init;
 #X obj 55 -278 s g26-\$0-adsr-sus-init;
 #X obj 15 -258 s g26-\$0-adsr-rel-init;
-#X connect 0 0 13 0;
-#X connect 1 0 17 0;
-#X connect 2 0 25 0;
-#X connect 3 0 14 0;
-#X connect 4 0 15 0;
-#X connect 5 0 16 0;
-#X connect 6 0 18 0;
-#X connect 7 0 19 0;
-#X connect 8 0 20 0;
-#X connect 9 0 21 0;
-#X connect 10 0 22 0;
-#X connect 11 0 23 0;
-#X connect 12 0 24 0;
-#X connect 13 0 9 0;
-#X connect 13 0 10 0;
-#X connect 13 0 11 0;
-#X connect 13 0 12 0;
-#X connect 13 0 2 0;
-#X connect 13 1 1 0;
-#X connect 13 1 6 0;
-#X connect 13 1 7 0;
-#X connect 13 1 8 0;
-#X connect 13 2 3 0;
-#X connect 13 2 4 0;
-#X connect 13 2 5 0;
-#X restore 10 620 pd preset-1;
-#X msg 470 820 4;
-#N canvas 1096 336 757 563 preset-8 0;
+#X obj 185 -387 s g26-\$0-grain-cntr-base-init;
+#X obj 440 -610 s g26-\$0-lfo-freq-init;
+#X obj 470 -630 s g26-\$0-lfo-depth-init;
+#X msg 470 -650 0;
+#X msg 440 -630 0;
+#X obj 40 -630 t b b b b;
+#X connect 0 0 29 0;
+#X connect 1 0 16 0;
+#X connect 2 0 23 0;
+#X connect 3 0 13 0;
+#X connect 4 0 14 0;
+#X connect 5 0 15 0;
+#X connect 6 0 17 0;
+#X connect 7 0 18 0;
+#X connect 8 0 24 0;
+#X connect 9 0 19 0;
+#X connect 10 0 20 0;
+#X connect 11 0 21 0;
+#X connect 12 0 22 0;
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 9 0;
+#X connect 29 0 10 0;
+#X connect 29 0 11 0;
+#X connect 29 0 12 0;
+#X connect 29 0 2 0;
+#X connect 29 1 1 0;
+#X connect 29 1 6 0;
+#X connect 29 1 7 0;
+#X connect 29 1 8 0;
+#X connect 29 2 3 0;
+#X connect 29 2 4 0;
+#X connect 29 2 5 0;
+#X connect 29 3 27 0;
+#X connect 29 3 28 0;
+#X restore 690 570 pd preset-1;
+#X msg 250 1080 4;
+#N canvas 1094 332 761 567 preset-8 0;
 #X obj 20 10 inlet;
 #X msg 300 210 90;
 #X msg -2 393 1000;
 #X msg 388 93 4;
-#X obj 20 40 t b b b;
 #X msg 348 113 1;
 #X msg 258 224 40;
 #X msg 208 244 900;
@@ -691,7 +694,6 @@ f 17;
 #X obj 302 226 s g26-\$0-pan-spray-init;
 #X obj 258 244 s g26-\$0-random-pos-init;
 #X obj 208 264 s g26-\$0-grain-size-init;
-#X obj 168 284 s g26-\$0-grain-centre-init;
 #X obj 128 333 s g26-\$0-adsr-peak-init;
 #X obj 98 353 s g26-\$0-adsr-att-init;
 #X obj 68 373 s g26-\$0-adsr-dec-init;
@@ -699,72 +701,81 @@ f 17;
 #X obj -2 413 s g26-\$0-adsr-rel-init;
 #X msg 128 313 90;
 #X msg 38 373 75;
-#X connect 0 0 4 0;
-#X connect 1 0 15 0;
-#X connect 2 0 23 0;
-#X connect 3 0 12 0;
-#X connect 4 0 24 0;
-#X connect 4 0 9 0;
-#X connect 4 0 10 0;
-#X connect 4 0 25 0;
-#X connect 4 0 2 0;
-#X connect 4 1 1 0;
-#X connect 4 1 6 0;
-#X connect 4 1 7 0;
-#X connect 4 1 8 0;
-#X connect 4 2 3 0;
-#X connect 4 2 5 0;
-#X connect 4 2 11 0;
-#X connect 5 0 13 0;
+#X obj 168 284 s g26-\$0-grain-cntr-base-init;
+#X obj 460 70 s g26-\$0-lfo-freq-init;
+#X obj 490 50 s g26-\$0-lfo-depth-init;
+#X msg 490 30 0;
+#X msg 460 50 0;
+#X obj 20 40 t b b b b;
+#X connect 0 0 29 0;
+#X connect 1 0 14 0;
+#X connect 2 0 21 0;
+#X connect 3 0 11 0;
+#X connect 4 0 12 0;
+#X connect 5 0 15 0;
 #X connect 6 0 16 0;
-#X connect 7 0 17 0;
+#X connect 7 0 24 0;
 #X connect 8 0 18 0;
-#X connect 9 0 20 0;
-#X connect 10 0 21 0;
-#X connect 11 0 14 0;
-#X connect 24 0 19 0;
-#X connect 25 0 22 0;
-#X restore 500 620 pd preset-8;
-#X obj 400 590 bng 15 250 50 0 empty empty 8.\\\ Metalworking 17 7
+#X connect 9 0 19 0;
+#X connect 10 0 13 0;
+#X connect 22 0 17 0;
+#X connect 23 0 20 0;
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 22 0;
+#X connect 29 0 8 0;
+#X connect 29 0 9 0;
+#X connect 29 0 23 0;
+#X connect 29 0 2 0;
+#X connect 29 1 1 0;
+#X connect 29 1 5 0;
+#X connect 29 1 6 0;
+#X connect 29 1 7 0;
+#X connect 29 2 3 0;
+#X connect 29 2 4 0;
+#X connect 29 2 10 0;
+#X connect 29 3 27 0;
+#X connect 29 3 28 0;
+#X restore 900 600 pd preset-8;
+#X obj 400 580 bng 15 250 50 0 empty empty 8.\\\ Metalworking 17 7
 0 10 #fcfcfc #000000 #000000;
-#X obj 290 840 s g26-\$0-sample-selector-init;
-#X obj 280 860 s g26-\$0-random-pos-init;
-#X obj 270 880 s g26-\$0-pan-spray-init;
-#X obj 260 900 s g26-\$0-reverse-init;
-#X obj 250 920 s g26-\$0-sample-note-init;
+#X obj 70 1100 s g26-\$0-sample-selector-init;
+#X obj 60 1120 s g26-\$0-random-pos-init;
+#X obj 50 1140 s g26-\$0-pan-spray-init;
+#X obj 40 1160 s g26-\$0-reverse-init;
+#X obj 30 1180 s g26-\$0-sample-note-init;
 #X obj 20 700 inlet;
 #X obj 160 700 inlet;
 #X text 20 680 MIDI pitch \, velocity \, duration;
 #X obj 210 700 inlet;
-#X obj 470 890 s g26-\$0-sample-octave-init;
-#X obj 520 840 s g26-\$0-adsr-peak-init;
-#X obj 510 860 s g26-\$0-adsr-sus-init;
-#X obj 670 840 s g26-\$0-grain-centre-init;
-#X obj 660 860 s g26-\$0-adsr-dec-init;
-#X obj 840 840 s g26-\$0-grain-size-init;
-#X obj 830 860 s g26-\$0-adsr-att-init;
-#X obj 820 880 s g26-\$0-adsr-rel-init;
+#X obj 250 1150 s g26-\$0-sample-octave-init;
+#X obj 300 1100 s g26-\$0-adsr-peak-init;
+#X obj 290 1120 s g26-\$0-adsr-sus-init;
+#X obj 440 1120 s g26-\$0-adsr-dec-init;
+#X obj 640 1100 s g26-\$0-grain-size-init;
+#X obj 630 1120 s g26-\$0-adsr-att-init;
+#X obj 620 1140 s g26-\$0-adsr-rel-init;
 #X obj 20 920 outlet~;
 #X obj 90 920 outlet~;
-#X text 350 720 Initialise param values;
-#X obj 360 170 bng 15 250 50 0 empty empty 1 17 7 0 10 #fcfcfc #000000
+#X text 60 980 Initialise param values;
+#X obj 360 160 bng 15 250 50 0 empty empty 1 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 400 170 bng 15 250 50 0 empty empty 8 17 7 0 10 #fcfcfc #000000
+#X obj 400 160 bng 15 250 50 0 empty empty 8 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 440 170 bng 15 250 50 0 empty empty 16 17 7 0 10 #fcfcfc #000000
+#X obj 440 160 bng 15 250 50 0 empty empty 16 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 400 190 bng 15 250 50 0 empty empty 32 17 7 0 10 #fcfcfc #000000
+#X obj 400 180 bng 15 250 50 0 empty empty 32 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 440 190 bng 15 250 50 0 empty empty 64 17 7 0 10 #fcfcfc #000000
+#X obj 440 180 bng 15 250 50 0 empty empty 64 17 7 0 10 #fcfcfc #000000
 #000000;
-#X text 10 540 Presets:;
-#X text 220 330 ---------------------------------------------------------
+#X text 10 530 Presets:;
+#X text 220 360 ---------------------------------------------------------
 ;
-#X text 220 140 ---------------------------------------------------------
+#X text 220 130 ---------------------------------------------------------
 ;
-#X text 220 340 Amp env, f 4;
+#X text 220 370 Amp env, f 4;
 #X msg 20 720 all \$1;
-#N canvas 992 368 979 693 preset-5 0;
+#N canvas 992 364 981 697 preset-5 0;
 #X obj 40 -410 inlet;
 #X msg 330 -219 90;
 #X msg 20 -30 1000;
@@ -783,41 +794,49 @@ f 17;
 #X obj 330 -200 s g26-\$0-pan-spray-init;
 #X obj 280 -179 s g26-\$0-random-pos-init;
 #X obj 230 -159 s g26-\$0-grain-size-init;
-#X obj 190 -139 s g26-\$0-grain-centre-init;
 #X obj 150 -90 s g26-\$0-adsr-peak-init;
 #X obj 120 -70 s g26-\$0-adsr-att-init;
 #X obj 90 -50 s g26-\$0-adsr-dec-init;
 #X obj 60 -30 s g26-\$0-adsr-sus-init;
 #X obj 20 -10 s g26-\$0-adsr-rel-init;
-#X obj 40 -370 t b b b;
 #X msg 60 -50 50;
-#X connect 0 0 24 0;
+#X obj 190 -139 s g26-\$0-grain-cntr-base-init;
+#X obj 470 -350 s g26-\$0-lfo-freq-init;
+#X obj 500 -370 s g26-\$0-lfo-depth-init;
+#X msg 500 -390 0;
+#X msg 470 -370 0;
+#X obj 40 -370 t b b b b;
+#X connect 0 0 29 0;
 #X connect 1 0 15 0;
-#X connect 2 0 23 0;
+#X connect 2 0 22 0;
 #X connect 3 0 11 0;
 #X connect 4 0 17 0;
 #X connect 5 0 12 0;
 #X connect 6 0 16 0;
-#X connect 7 0 18 0;
-#X connect 8 0 19 0;
-#X connect 9 0 20 0;
-#X connect 10 0 21 0;
+#X connect 7 0 24 0;
+#X connect 8 0 18 0;
+#X connect 9 0 19 0;
+#X connect 10 0 20 0;
 #X connect 14 0 13 0;
-#X connect 24 0 8 0;
-#X connect 24 0 9 0;
-#X connect 24 0 10 0;
-#X connect 24 0 25 0;
-#X connect 24 0 2 0;
-#X connect 24 1 1 0;
-#X connect 24 1 6 0;
-#X connect 24 1 4 0;
-#X connect 24 1 7 0;
-#X connect 24 2 3 0;
-#X connect 24 2 5 0;
-#X connect 24 2 14 0;
-#X connect 25 0 22 0;
-#X restore 290 620 pd preset-5;
-#N canvas 1091 338 819 732 preset-3 0;
+#X connect 23 0 21 0;
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 8 0;
+#X connect 29 0 9 0;
+#X connect 29 0 10 0;
+#X connect 29 0 23 0;
+#X connect 29 0 2 0;
+#X connect 29 1 1 0;
+#X connect 29 1 6 0;
+#X connect 29 1 4 0;
+#X connect 29 1 7 0;
+#X connect 29 2 3 0;
+#X connect 29 2 5 0;
+#X connect 29 2 14 0;
+#X connect 29 3 27 0;
+#X connect 29 3 28 0;
+#X restore 830 570 pd preset-5;
+#N canvas 1089 336 823 736 preset-3 0;
 #X obj 30 -400 inlet;
 #X msg 322 -207 90;
 #X msg 112 -78 200;
@@ -830,7 +849,6 @@ f 17;
 #X msg 362 -298 4;
 #X msg 222 -167 750;
 #X msg 182 -147 40;
-#X obj 30 -360 t b b b;
 #X msg 322 -278 5;
 #X obj 402 -298 s g26-\$0-sample-octave-init;
 #X obj 362 -278 s g26-\$0-sample-note-init;
@@ -838,39 +856,48 @@ f 17;
 #X obj 322 -188 s g26-\$0-pan-spray-init;
 #X obj 272 -167 s g26-\$0-random-pos-init;
 #X obj 222 -147 s g26-\$0-grain-size-init;
-#X obj 182 -127 s g26-\$0-grain-centre-init;
 #X obj 142 -78 s g26-\$0-adsr-peak-init;
 #X obj 112 -58 s g26-\$0-adsr-att-init;
 #X obj 82 -38 s g26-\$0-adsr-dec-init;
 #X obj 52 -18 s g26-\$0-adsr-sus-init;
 #X obj 12 2 s g26-\$0-adsr-rel-init;
-#X connect 0 0 12 0;
-#X connect 1 0 17 0;
-#X connect 2 0 22 0;
-#X connect 3 0 23 0;
-#X connect 4 0 25 0;
-#X connect 5 0 14 0;
-#X connect 6 0 18 0;
-#X connect 7 0 21 0;
-#X connect 8 0 24 0;
-#X connect 9 0 15 0;
-#X connect 10 0 19 0;
-#X connect 11 0 20 0;
-#X connect 12 0 7 0;
-#X connect 12 0 2 0;
-#X connect 12 0 3 0;
-#X connect 12 0 8 0;
-#X connect 12 0 4 0;
-#X connect 12 1 1 0;
-#X connect 12 1 6 0;
-#X connect 12 1 10 0;
-#X connect 12 1 11 0;
-#X connect 12 2 5 0;
-#X connect 12 2 9 0;
-#X connect 12 2 13 0;
-#X connect 13 0 16 0;
-#X restore 150 620 pd preset-3;
-#N canvas 793 435 864 688 preset-4 0;
+#X obj 182 -127 s g26-\$0-grain-cntr-base-init;
+#X obj 470 -340 s g26-\$0-lfo-freq-init;
+#X obj 500 -360 s g26-\$0-lfo-depth-init;
+#X msg 500 -380 0;
+#X msg 470 -360 0;
+#X obj 30 -360 t b b b b;
+#X connect 0 0 29 0;
+#X connect 1 0 16 0;
+#X connect 2 0 20 0;
+#X connect 3 0 21 0;
+#X connect 4 0 23 0;
+#X connect 5 0 13 0;
+#X connect 6 0 17 0;
+#X connect 7 0 19 0;
+#X connect 8 0 22 0;
+#X connect 9 0 14 0;
+#X connect 10 0 18 0;
+#X connect 11 0 24 0;
+#X connect 12 0 15 0;
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 7 0;
+#X connect 29 0 2 0;
+#X connect 29 0 3 0;
+#X connect 29 0 8 0;
+#X connect 29 0 4 0;
+#X connect 29 1 1 0;
+#X connect 29 1 6 0;
+#X connect 29 1 10 0;
+#X connect 29 1 11 0;
+#X connect 29 2 5 0;
+#X connect 29 2 9 0;
+#X connect 29 2 12 0;
+#X connect 29 3 27 0;
+#X connect 29 3 28 0;
+#X restore 760 570 pd preset-3;
+#N canvas 791 433 868 690 preset-4 0;
 #X obj 30 -320 inlet;
 #X msg 322 -138 90;
 #X msg 112 -9 200;
@@ -888,47 +915,55 @@ f 17;
 #X obj 322 -189 s g26-\$0-sample-selector-init;
 #X obj 322 -119 s g26-\$0-pan-spray-init;
 #X obj 222 -78 s g26-\$0-grain-size-init;
-#X obj 182 -58 s g26-\$0-grain-centre-init;
 #X obj 142 -9 s g26-\$0-adsr-peak-init;
 #X obj 112 11 s g26-\$0-adsr-att-init;
 #X obj 82 31 s g26-\$0-adsr-dec-init;
 #X obj 52 51 s g26-\$0-adsr-sus-init;
 #X obj 12 71 s g26-\$0-adsr-rel-init;
-#X obj 30 -280 t b b b;
 #X obj 362 -209 s g26-\$0-sample-note-init;
 #X obj 272 -98 s g26-\$0-random-pos-init;
-#X connect 0 0 23 0;
+#X obj 182 -58 s g26-\$0-grain-cntr-base-init;
+#X obj 30 -280 t b b b b;
+#X obj 460 -260 s g26-\$0-lfo-freq-init;
+#X obj 490 -280 s g26-\$0-lfo-depth-init;
+#X msg 490 -300 0;
+#X msg 460 -280 0;
+#X connect 0 0 25 0;
 #X connect 1 0 15 0;
-#X connect 2 0 19 0;
-#X connect 3 0 22 0;
+#X connect 2 0 18 0;
+#X connect 3 0 21 0;
 #X connect 4 0 13 0;
-#X connect 5 0 24 0;
-#X connect 6 0 17 0;
+#X connect 5 0 22 0;
+#X connect 6 0 24 0;
 #X connect 7 0 16 0;
-#X connect 8 0 25 0;
-#X connect 9 0 18 0;
-#X connect 10 0 20 0;
-#X connect 11 0 21 0;
+#X connect 8 0 23 0;
+#X connect 9 0 17 0;
+#X connect 10 0 19 0;
+#X connect 11 0 20 0;
 #X connect 12 0 14 0;
-#X connect 23 0 9 0;
-#X connect 23 0 2 0;
-#X connect 23 0 10 0;
-#X connect 23 0 11 0;
-#X connect 23 0 3 0;
-#X connect 23 1 1 0;
-#X connect 23 1 8 0;
-#X connect 23 1 7 0;
-#X connect 23 1 6 0;
-#X connect 23 2 4 0;
-#X connect 23 2 5 0;
-#X connect 23 2 12 0;
-#X restore 220 620 pd preset-4;
+#X connect 25 0 9 0;
+#X connect 25 0 2 0;
+#X connect 25 0 10 0;
+#X connect 25 0 11 0;
+#X connect 25 0 3 0;
+#X connect 25 1 1 0;
+#X connect 25 1 8 0;
+#X connect 25 1 7 0;
+#X connect 25 1 6 0;
+#X connect 25 2 4 0;
+#X connect 25 2 5 0;
+#X connect 25 2 12 0;
+#X connect 25 3 28 0;
+#X connect 25 3 29 0;
+#X connect 28 0 27 0;
+#X connect 29 0 26 0;
+#X restore 760 600 pd preset-4;
 #X obj 160 790 delay;
 #X obj 210 730 * 1000;
 #X obj 200 760 t b f;
 #X obj 160 810 0;
-#X obj 390 760 t b b b b b;
-#N canvas 1127 512 810 583 preset-swooning-violin 0;
+#X obj 60 1020 t b b b b b;
+#N canvas 1126 510 812 585 preset-swooning-violin 0;
 #X obj 30 -310 inlet;
 #X msg 322 -127 90;
 #X msg 12 62 1000;
@@ -949,23 +984,23 @@ f 17;
 #X obj 322 -108 s g26-\$0-pan-spray-init;
 #X obj 272 -87 s g26-\$0-random-pos-init;
 #X obj 222 -67 s g26-\$0-grain-size-init;
-#X obj 182 -47 s g26-\$0-grain-centre-init;
 #X obj 140 0 s g26-\$0-adsr-peak-init;
 #X obj 112 22 s g26-\$0-adsr-att-init;
 #X obj 82 42 s g26-\$0-adsr-dec-init;
 #X obj 52 62 s g26-\$0-adsr-sus-init;
 #X obj 12 82 s g26-\$0-adsr-rel-init;
+#X obj 182 -47 s g26-\$0-grain-cntr-base-init;
 #X connect 0 0 12 0;
 #X connect 1 0 17 0;
-#X connect 2 0 25 0;
+#X connect 2 0 24 0;
 #X connect 3 0 13 0;
-#X connect 4 0 23 0;
-#X connect 5 0 22 0;
+#X connect 4 0 22 0;
+#X connect 5 0 21 0;
 #X connect 6 0 14 0;
 #X connect 7 0 19 0;
-#X connect 8 0 20 0;
-#X connect 9 0 21 0;
-#X connect 10 0 24 0;
+#X connect 8 0 25 0;
+#X connect 9 0 20 0;
+#X connect 10 0 23 0;
 #X connect 11 0 18 0;
 #X connect 12 0 9 0;
 #X connect 12 0 5 0;
@@ -980,8 +1015,8 @@ f 17;
 #X connect 12 2 6 0;
 #X connect 12 2 16 0;
 #X connect 16 0 15 0;
-#X restore 640 610 pd preset-swooning-violin;
-#N canvas 378 340 879 622 preset-6 0;
+#X restore 660 700 pd preset-swooning-violin;
+#N canvas 376 338 883 625 preset-6 0;
 #X obj 32 -38 inlet;
 #X msg 322 153 90;
 #X msg 402 42 4;
@@ -993,13 +1028,11 @@ f 17;
 #X obj 322 172 s g26-\$0-pan-spray-init;
 #X obj 272 193 s g26-\$0-random-pos-init;
 #X obj 222 213 s g26-\$0-grain-size-init;
-#X obj 182 233 s g26-\$0-grain-centre-init;
 #X obj 142 282 s g26-\$0-adsr-peak-init;
 #X obj 112 302 s g26-\$0-adsr-att-init;
 #X obj 82 322 s g26-\$0-adsr-dec-init;
 #X obj 52 342 s g26-\$0-adsr-sus-init;
 #X obj 12 362 s g26-\$0-adsr-rel-init;
-#X obj 32 2 t b b b;
 #X msg 322 82 9;
 #X msg 272 173 12;
 #X msg 222 193 825;
@@ -1008,37 +1041,47 @@ f 17;
 #X msg 82 302 500;
 #X msg 12 342 1500;
 #X msg 52 322 50;
-#X connect 0 0 17 0;
+#X obj 182 233 s g26-\$0-grain-cntr-base-init;
+#X obj 470 20 s g26-\$0-lfo-freq-init;
+#X obj 500 0 s g26-\$0-lfo-depth-init;
+#X msg 500 -20 0;
+#X msg 470 0 0;
+#X obj 32 2 t b b b b;
+#X connect 0 0 29 0;
 #X connect 1 0 8 0;
 #X connect 2 0 5 0;
 #X connect 3 0 6 0;
-#X connect 4 0 13 0;
-#X connect 17 0 22 0;
-#X connect 17 0 4 0;
-#X connect 17 0 23 0;
-#X connect 17 0 25 0;
-#X connect 17 0 24 0;
-#X connect 17 1 1 0;
-#X connect 17 1 19 0;
-#X connect 17 1 20 0;
-#X connect 17 1 21 0;
-#X connect 17 2 2 0;
-#X connect 17 2 3 0;
-#X connect 17 2 18 0;
-#X connect 18 0 7 0;
-#X connect 19 0 9 0;
-#X connect 20 0 10 0;
-#X connect 21 0 11 0;
-#X connect 22 0 12 0;
+#X connect 4 0 12 0;
+#X connect 16 0 7 0;
+#X connect 17 0 9 0;
+#X connect 18 0 10 0;
+#X connect 19 0 24 0;
+#X connect 20 0 11 0;
+#X connect 21 0 13 0;
+#X connect 22 0 15 0;
 #X connect 23 0 14 0;
-#X connect 24 0 16 0;
-#X connect 25 0 15 0;
-#X restore 360 620 pd preset-6;
-#X obj 260 590 bng 15 250 50 0 empty empty 6.\\\ Drumming\\\ Rain 17
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 20 0;
+#X connect 29 0 4 0;
+#X connect 29 0 21 0;
+#X connect 29 0 23 0;
+#X connect 29 0 22 0;
+#X connect 29 1 1 0;
+#X connect 29 1 17 0;
+#X connect 29 1 18 0;
+#X connect 29 1 19 0;
+#X connect 29 2 2 0;
+#X connect 29 2 3 0;
+#X connect 29 2 16 0;
+#X connect 29 3 27 0;
+#X connect 29 3 28 0;
+#X restore 830 600 pd preset-6;
+#X obj 260 580 bng 15 250 50 0 empty empty 6.\\\ Drumming\\\ Rain 17
 7 0 10 #fcfcfc #000000 #000000;
-#X obj 400 560 bng 15 250 50 0 empty empty 7.\ Ready\ for\ Jesus 17
-7 0 10 #fcfcfc #000000 #000000;
-#N canvas 1040 308 838 751 preset-treble-sax 0;
+#X obj 400 550 bng 15 250 50 0 empty empty 7.\\\ Ready\\\ for\\\ Jesus
+17 7 0 10 #fcfcfc #000000 #000000;
+#N canvas 1040 307 839 752 preset-treble-sax 0;
 #X obj 60 -240 inlet;
 #X msg 350 -50 90;
 #X msg 140 80 200;
@@ -1057,7 +1100,6 @@ f 17;
 #X obj 350 -30 s g26-\$0-pan-spray-init;
 #X obj 250 11 s g26-\$0-grain-size-init;
 #X obj 300 -9 s g26-\$0-random-pos-init;
-#X obj 210 31 s g26-\$0-grain-centre-init;
 #X obj 170 80 s g26-\$0-adsr-peak-init;
 #X obj 140 100 s g26-\$0-adsr-att-init;
 #X obj 110 120 s g26-\$0-adsr-dec-init;
@@ -1065,33 +1107,34 @@ f 17;
 #X obj 40 160 s g26-\$0-adsr-rel-init;
 #X obj 350 -100 s g26-\$0-sample-selector-init;
 #X obj 60 -200 t b b b;
-#X connect 0 0 25 0;
+#X obj 210 31 s g26-\$0-grain-cntr-base-init;
+#X connect 0 0 24 0;
 #X connect 1 0 15 0;
-#X connect 2 0 20 0;
-#X connect 3 0 21 0;
-#X connect 4 0 23 0;
+#X connect 2 0 19 0;
+#X connect 3 0 20 0;
+#X connect 4 0 22 0;
 #X connect 5 0 12 0;
 #X connect 6 0 13 0;
 #X connect 7 0 17 0;
 #X connect 8 0 16 0;
-#X connect 9 0 18 0;
-#X connect 10 0 19 0;
-#X connect 11 0 22 0;
-#X connect 14 0 24 0;
-#X connect 25 0 10 0;
-#X connect 25 0 2 0;
-#X connect 25 0 3 0;
-#X connect 25 0 11 0;
-#X connect 25 0 4 0;
-#X connect 25 1 1 0;
-#X connect 25 1 7 0;
-#X connect 25 1 8 0;
-#X connect 25 1 9 0;
-#X connect 25 2 5 0;
-#X connect 25 2 6 0;
-#X connect 25 2 14 0;
-#X restore 640 630 pd preset-treble-sax;
-#N canvas 1059 314 807 548 preset-2 0;
+#X connect 9 0 25 0;
+#X connect 10 0 18 0;
+#X connect 11 0 21 0;
+#X connect 14 0 23 0;
+#X connect 24 0 10 0;
+#X connect 24 0 2 0;
+#X connect 24 0 3 0;
+#X connect 24 0 11 0;
+#X connect 24 0 4 0;
+#X connect 24 1 1 0;
+#X connect 24 1 7 0;
+#X connect 24 1 8 0;
+#X connect 24 1 9 0;
+#X connect 24 2 5 0;
+#X connect 24 2 6 0;
+#X connect 24 2 14 0;
+#X restore 660 720 pd preset-treble-sax;
+#N canvas 1056 311 813 554 preset-2 0;
 #X obj 42 -378 inlet;
 #X msg 332 -187 90;
 #X msg 22 2 1000;
@@ -1111,39 +1154,49 @@ f 17;
 #X obj 332 -168 s g26-\$0-pan-spray-init;
 #X obj 282 -147 s g26-\$0-random-pos-init;
 #X obj 232 -127 s g26-\$0-grain-size-init;
-#X obj 192 -107 s g26-\$0-grain-centre-init;
 #X obj 152 -58 s g26-\$0-adsr-peak-init;
 #X obj 122 -38 s g26-\$0-adsr-att-init;
 #X obj 92 -18 s g26-\$0-adsr-dec-init;
 #X obj 62 2 s g26-\$0-adsr-sus-init;
 #X obj 22 22 s g26-\$0-adsr-rel-init;
-#X connect 0 0 9 0;
-#X connect 0 0 10 0;
-#X connect 0 0 4 0;
-#X connect 0 0 1 0;
-#X connect 0 0 12 0;
-#X connect 0 0 8 0;
-#X connect 0 0 3 0;
-#X connect 0 0 2 0;
-#X connect 0 0 7 0;
-#X connect 0 0 6 0;
-#X connect 0 0 11 0;
-#X connect 0 0 5 0;
+#X obj 192 -107 s g26-\$0-grain-cntr-base-init;
+#X obj 500 -320 s g26-\$0-lfo-freq-init;
+#X obj 530 -340 s g26-\$0-lfo-depth-init;
+#X msg 530 -360 0;
+#X msg 500 -340 0;
+#X obj 40 -350 t b b b b;
+#X connect 0 0 29 0;
 #X connect 1 0 16 0;
-#X connect 2 0 24 0;
+#X connect 2 0 23 0;
 #X connect 3 0 13 0;
 #X connect 4 0 17 0;
-#X connect 5 0 20 0;
-#X connect 6 0 22 0;
-#X connect 7 0 23 0;
+#X connect 5 0 19 0;
+#X connect 6 0 21 0;
+#X connect 7 0 22 0;
 #X connect 8 0 14 0;
-#X connect 9 0 19 0;
+#X connect 9 0 24 0;
 #X connect 10 0 18 0;
-#X connect 11 0 21 0;
+#X connect 11 0 20 0;
 #X connect 12 0 15 0;
-#X restore 80 620 pd preset-2;
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 5 0;
+#X connect 29 0 11 0;
+#X connect 29 0 6 0;
+#X connect 29 0 7 0;
+#X connect 29 0 2 0;
+#X connect 29 1 1 0;
+#X connect 29 1 4 0;
+#X connect 29 1 10 0;
+#X connect 29 1 9 0;
+#X connect 29 2 3 0;
+#X connect 29 2 8 0;
+#X connect 29 2 12 0;
+#X connect 29 3 27 0;
+#X connect 29 3 28 0;
+#X restore 690 600 pd preset-2;
 #X obj 20 750 clone grain 64 \$0;
-#N canvas 377 339 881 624 preset-factory-floor 0;
+#N canvas 376 338 883 625 preset-factory-floor 0;
 #X obj 32 -38 inlet;
 #X msg 322 153 90;
 #X msg 362 62 0;
@@ -1153,7 +1206,6 @@ f 17;
 #X obj 322 172 s g26-\$0-pan-spray-init;
 #X obj 272 193 s g26-\$0-random-pos-init;
 #X obj 222 213 s g26-\$0-grain-size-init;
-#X obj 182 233 s g26-\$0-grain-centre-init;
 #X obj 142 282 s g26-\$0-adsr-peak-init;
 #X obj 112 302 s g26-\$0-adsr-att-init;
 #X obj 82 322 s g26-\$0-adsr-dec-init;
@@ -1170,33 +1222,34 @@ f 17;
 #X msg 182 213 0;
 #X msg 82 302 25;
 #X msg 112 282 300;
-#X connect 0 0 15 0;
+#X obj 182 233 s g26-\$0-grain-cntr-base-init;
+#X connect 0 0 14 0;
 #X connect 1 0 6 0;
 #X connect 2 0 4 0;
-#X connect 15 0 16 0;
-#X connect 15 0 25 0;
-#X connect 15 0 24 0;
-#X connect 15 0 18 0;
-#X connect 15 0 17 0;
-#X connect 15 1 1 0;
-#X connect 15 1 21 0;
-#X connect 15 1 22 0;
-#X connect 15 1 23 0;
-#X connect 15 2 19 0;
-#X connect 15 2 2 0;
-#X connect 15 2 20 0;
-#X connect 16 0 10 0;
-#X connect 17 0 14 0;
-#X connect 18 0 13 0;
-#X connect 19 0 3 0;
-#X connect 20 0 5 0;
-#X connect 21 0 7 0;
-#X connect 22 0 8 0;
-#X connect 23 0 9 0;
-#X connect 24 0 12 0;
-#X connect 25 0 11 0;
-#X restore 640 650 pd preset-factory-floor;
-#N canvas 653 161 1050 701 preset-7 0;
+#X connect 14 0 15 0;
+#X connect 14 0 24 0;
+#X connect 14 0 23 0;
+#X connect 14 0 17 0;
+#X connect 14 0 16 0;
+#X connect 14 1 1 0;
+#X connect 14 1 20 0;
+#X connect 14 1 21 0;
+#X connect 14 1 22 0;
+#X connect 14 2 18 0;
+#X connect 14 2 2 0;
+#X connect 14 2 19 0;
+#X connect 15 0 9 0;
+#X connect 16 0 13 0;
+#X connect 17 0 12 0;
+#X connect 18 0 3 0;
+#X connect 19 0 5 0;
+#X connect 20 0 7 0;
+#X connect 21 0 8 0;
+#X connect 22 0 25 0;
+#X connect 23 0 11 0;
+#X connect 24 0 10 0;
+#X restore 660 740 pd preset-factory-floor;
+#N canvas 649 155 1058 711 preset-7 0;
 #X obj 42 -438 inlet;
 #X obj 412 -338 s g26-\$0-sample-octave-init;
 #X obj 372 -318 s g26-\$0-sample-note-init;
@@ -1204,13 +1257,11 @@ f 17;
 #X obj 332 -228 s g26-\$0-pan-spray-init;
 #X obj 282 -207 s g26-\$0-random-pos-init;
 #X obj 232 -187 s g26-\$0-grain-size-init;
-#X obj 192 -167 s g26-\$0-grain-centre-init;
 #X obj 152 -118 s g26-\$0-adsr-peak-init;
 #X obj 122 -98 s g26-\$0-adsr-att-init;
 #X obj 92 -78 s g26-\$0-adsr-dec-init;
 #X obj 62 -58 s g26-\$0-adsr-sus-init;
 #X obj 22 -38 s g26-\$0-adsr-rel-init;
-#X obj 42 -398 t b b b;
 #X msg 332 -318 11;
 #X msg 332 -247 80;
 #X msg 282 -227 13;
@@ -1223,87 +1274,346 @@ f 17;
 #X msg 22 -58 200;
 #X msg 412 -358 3;
 #X msg 372 -338 11;
-#X connect 0 0 13 0;
-#X connect 13 0 19 0;
-#X connect 13 0 20 0;
-#X connect 13 0 21 0;
-#X connect 13 0 22 0;
-#X connect 13 0 23 0;
-#X connect 13 1 15 0;
-#X connect 13 1 16 0;
-#X connect 13 1 17 0;
-#X connect 13 1 18 0;
-#X connect 13 2 24 0;
-#X connect 13 2 25 0;
-#X connect 13 2 14 0;
-#X connect 14 0 3 0;
-#X connect 15 0 4 0;
-#X connect 16 0 5 0;
-#X connect 17 0 6 0;
-#X connect 18 0 7 0;
-#X connect 19 0 8 0;
-#X connect 20 0 9 0;
-#X connect 21 0 10 0;
-#X connect 22 0 11 0;
-#X connect 23 0 12 0;
-#X connect 24 0 1 0;
-#X connect 25 0 2 0;
-#X restore 430 620 pd preset-7;
-#X connect 67 0 149 0;
-#X connect 67 1 150 0;
-#X connect 68 0 114 1;
-#X connect 69 0 114 2;
-#X connect 78 0 114 0;
+#X obj 192 -167 s g26-\$0-grain-cntr-base-init;
+#X obj 470 -380 s g26-\$0-lfo-freq-init;
+#X obj 500 -400 s g26-\$0-lfo-depth-init;
+#X msg 500 -420 0;
+#X msg 470 -400 0;
+#X obj 42 -398 t b b b b;
+#X connect 0 0 29 0;
+#X connect 12 0 3 0;
+#X connect 13 0 4 0;
+#X connect 14 0 5 0;
+#X connect 15 0 6 0;
+#X connect 16 0 24 0;
+#X connect 17 0 7 0;
+#X connect 18 0 8 0;
+#X connect 19 0 9 0;
+#X connect 20 0 10 0;
+#X connect 21 0 11 0;
+#X connect 22 0 1 0;
+#X connect 23 0 2 0;
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 17 0;
+#X connect 29 0 18 0;
+#X connect 29 0 19 0;
+#X connect 29 0 20 0;
+#X connect 29 0 21 0;
+#X connect 29 1 13 0;
+#X connect 29 1 14 0;
+#X connect 29 1 15 0;
+#X connect 29 1 16 0;
+#X connect 29 2 22 0;
+#X connect 29 2 23 0;
+#X connect 29 2 12 0;
+#X connect 29 3 27 0;
+#X connect 29 3 28 0;
+#X restore 900 570 pd preset-7;
+#X obj 420 280 hsl 128 15 0 2 0 0 g26-\$0-lfo-freq g26-\$0-lfo-freq-init
+Grain\\\ centre\\\ LFO\\\ freq -2 -8 0 10 #fcfcfc #000000 #000000 0
+1;
+#X obj 420 310 hsl 128 15 0 100 0 0 g26-\$0-lfo-depth g26-\$0-lfo-depth-init
+Grain\\\ centre\\\ LFO\\\ depth -2 -8 0 10 #fcfcfc #000000 #000000
+0 1;
+#X floatatom 560 280 5 0 0 1 Hz g26-#0-lfo-freq -, f 5;
+#X floatatom 560 310 5 0 0 1 % g26-#0-lfo-depth -, f 5;
+#X text 420 340 Current grain centre:;
+#X floatatom 560 340 5 0 0 1 % g26-#0-grain-cntr -, f 5;
+#X text 370 680 Grain centre LFO;
+#X obj 440 750 osc~;
+#X obj 370 700 r g26-\$0-lfo-freq;
+#X obj 480 770 r g26-\$0-lfo-depth;
+#X obj 260 820 r g26-\$0-grain-cntr-base;
+#X obj 450 1100 s g26-\$0-grain-cntr-base-init;
+#X obj 440 790 *~;
+#X obj 370 790 metro 50;
+#X obj 440 830 snapshot~;
+#X obj 440 870 +;
+#X obj 440 896 clip 0 100;
+#X obj 440 920 s g26-\$0-grain-cntr;
+#X obj 370 750 > 0;
+#X obj 10 1220 s g26-\$0-lfo-freq-init;
+#X obj 20 1200 s g26-\$0-lfo-depth-init;
+#X obj 260 900 print \$0;
+#X obj 330 750 == 0;
+#X obj 260 870 spigot 1;
+#X obj 220 840 f;
+#X obj 310 780 t b f;
+#X obj 10 610 bng 15 250 50 0 empty empty 2e.\\\ Evolving\\\ Darkness
+17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 400 610 bng 15 250 50 0 empty empty 7e.\\\ Evolving\\\ Jesus
+17 7 0 10 #fcfcfc #000000 #000000;
+#N canvas 843 183 848 879 preset-fever-dream 0;
+#X obj 52 13 inlet;
+#X obj 422 113 s g26-\$0-sample-octave-init;
+#X obj 382 133 s g26-\$0-sample-note-init;
+#X obj 342 153 s g26-\$0-sample-selector-init;
+#X obj 342 223 s g26-\$0-pan-spray-init;
+#X obj 292 244 s g26-\$0-random-pos-init;
+#X obj 242 264 s g26-\$0-grain-size-init;
+#X obj 162 333 s g26-\$0-adsr-peak-init;
+#X obj 132 353 s g26-\$0-adsr-att-init;
+#X obj 102 373 s g26-\$0-adsr-dec-init;
+#X obj 72 393 s g26-\$0-adsr-sus-init;
+#X obj 32 413 s g26-\$0-adsr-rel-init;
+#X msg 102 353 50;
+#X msg 32 393 200;
+#X obj 202 284 s g26-\$0-grain-cntr-base-init;
+#X obj 430 62 s g26-\$0-lfo-freq-init;
+#X obj 470 40 s g26-\$0-lfo-depth-init;
+#X msg 292 224 5;
+#X msg 430 42 0.125;
+#X msg 422 93 4;
+#X msg 382 113 0;
+#X msg 342 133 10;
+#X msg 342 204 90;
+#X msg 242 244 375;
+#X msg 202 264 10;
+#X msg 162 313 95;
+#X msg 132 333 230;
+#X msg 72 373 80;
+#X msg 470 20 4;
+#X obj 520 0 s g26-\$0-reverse-init;
+#X msg 520 -20 1;
+#X obj 52 53 t b b b b b;
+#X connect 0 0 31 0;
+#X connect 12 0 9 0;
+#X connect 13 0 11 0;
+#X connect 17 0 5 0;
+#X connect 18 0 15 0;
+#X connect 19 0 1 0;
+#X connect 20 0 2 0;
+#X connect 21 0 3 0;
+#X connect 22 0 4 0;
+#X connect 23 0 6 0;
+#X connect 24 0 14 0;
+#X connect 25 0 7 0;
+#X connect 26 0 8 0;
+#X connect 27 0 10 0;
+#X connect 28 0 16 0;
+#X connect 30 0 29 0;
+#X connect 31 0 25 0;
+#X connect 31 0 26 0;
+#X connect 31 0 12 0;
+#X connect 31 0 27 0;
+#X connect 31 0 13 0;
+#X connect 31 1 22 0;
+#X connect 31 1 17 0;
+#X connect 31 1 23 0;
+#X connect 31 1 24 0;
+#X connect 31 2 19 0;
+#X connect 31 2 20 0;
+#X connect 31 2 21 0;
+#X connect 31 3 28 0;
+#X connect 31 3 18 0;
+#X connect 31 4 30 0;
+#X restore 770 630 pd preset-fever-dream;
+#X obj 170 610 bng 15 250 50 0 empty empty 9e.\\\ Fever\\\ Dream 17
+7 0 10 #fcfcfc #000000 #000000;
+#N canvas 795 437 816 623 preset-2e 0;
+#X obj 42 -389 inlet;
+#X msg 332 -198 90;
+#X msg 22 -9 1000;
+#X msg 412 -309 4;
+#X msg 282 -178 10;
+#X msg 152 -89 80;
+#X msg 92 -49 50;
+#X msg 62 -29 60;
+#X msg 372 -289 5;
+#X msg 232 -158 800;
+#X msg 122 -69 25;
+#X msg 332 -269 6;
+#X obj 412 -289 s g26-\$0-sample-octave-init;
+#X obj 372 -269 s g26-\$0-sample-note-init;
+#X obj 332 -249 s g26-\$0-sample-selector-init;
+#X obj 332 -179 s g26-\$0-pan-spray-init;
+#X obj 282 -158 s g26-\$0-random-pos-init;
+#X obj 232 -138 s g26-\$0-grain-size-init;
+#X obj 152 -69 s g26-\$0-adsr-peak-init;
+#X obj 122 -49 s g26-\$0-adsr-att-init;
+#X obj 92 -29 s g26-\$0-adsr-dec-init;
+#X obj 62 -9 s g26-\$0-adsr-sus-init;
+#X obj 22 11 s g26-\$0-adsr-rel-init;
+#X obj 192 -118 s g26-\$0-grain-cntr-base-init;
+#X obj 450 -340 s g26-\$0-lfo-freq-init;
+#X obj 480 -360 s g26-\$0-lfo-depth-init;
+#X msg 450 -360 0.2;
+#X obj 50 -360 t b b b b;
+#X msg 192 -138 25;
+#X msg 480 -380 12;
+#X connect 0 0 27 0;
+#X connect 1 0 15 0;
+#X connect 2 0 22 0;
+#X connect 3 0 12 0;
+#X connect 4 0 16 0;
+#X connect 5 0 18 0;
+#X connect 6 0 20 0;
+#X connect 7 0 21 0;
+#X connect 8 0 13 0;
+#X connect 9 0 17 0;
+#X connect 10 0 19 0;
+#X connect 11 0 14 0;
+#X connect 26 0 24 0;
+#X connect 27 0 5 0;
+#X connect 27 0 10 0;
+#X connect 27 0 6 0;
+#X connect 27 0 7 0;
+#X connect 27 0 2 0;
+#X connect 27 1 1 0;
+#X connect 27 1 4 0;
+#X connect 27 1 9 0;
+#X connect 27 1 28 0;
+#X connect 27 2 3 0;
+#X connect 27 2 8 0;
+#X connect 27 2 11 0;
+#X connect 27 3 29 0;
+#X connect 27 3 26 0;
+#X connect 28 0 23 0;
+#X connect 29 0 25 0;
+#X restore 690 630 pd preset-2e;
+#N canvas 795 437 790 632 preset-7e 0;
+#X obj 32 -399 inlet;
+#X obj 402 -299 s g26-\$0-sample-octave-init;
+#X obj 362 -279 s g26-\$0-sample-note-init;
+#X obj 322 -259 s g26-\$0-sample-selector-init;
+#X obj 322 -189 s g26-\$0-pan-spray-init;
+#X obj 272 -168 s g26-\$0-random-pos-init;
+#X obj 222 -148 s g26-\$0-grain-size-init;
+#X obj 142 -79 s g26-\$0-adsr-peak-init;
+#X obj 112 -59 s g26-\$0-adsr-att-init;
+#X obj 82 -39 s g26-\$0-adsr-dec-init;
+#X obj 52 -19 s g26-\$0-adsr-sus-init;
+#X obj 12 1 s g26-\$0-adsr-rel-init;
+#X msg 322 -279 11;
+#X msg 322 -208 80;
+#X msg 222 -168 420;
+#X msg 142 -99 80;
+#X msg 112 -79 80;
+#X msg 82 -59 50;
+#X msg 52 -39 70;
+#X msg 12 -19 200;
+#X msg 402 -319 3;
+#X msg 362 -299 11;
+#X obj 182 -128 s g26-\$0-grain-cntr-base-init;
+#X obj 410 -350 s g26-\$0-lfo-freq-init;
+#X obj 440 -370 s g26-\$0-lfo-depth-init;
+#X obj 32 -359 t b b b b;
+#X msg 440 -390 15;
+#X msg 272 -188 5;
+#X msg 182 -148 33;
+#X msg 410 -370 0.1;
+#X connect 0 0 25 0;
+#X connect 12 0 3 0;
+#X connect 13 0 4 0;
+#X connect 14 0 6 0;
+#X connect 15 0 7 0;
+#X connect 16 0 8 0;
+#X connect 17 0 9 0;
+#X connect 18 0 10 0;
+#X connect 19 0 11 0;
+#X connect 20 0 1 0;
+#X connect 21 0 2 0;
+#X connect 25 0 15 0;
+#X connect 25 0 16 0;
+#X connect 25 0 17 0;
+#X connect 25 0 18 0;
+#X connect 25 0 19 0;
+#X connect 25 1 13 0;
+#X connect 25 1 27 0;
+#X connect 25 1 14 0;
+#X connect 25 1 28 0;
+#X connect 25 2 20 0;
+#X connect 25 2 21 0;
+#X connect 25 2 12 0;
+#X connect 25 3 26 0;
+#X connect 25 3 29 0;
+#X connect 26 0 24 0;
+#X connect 27 0 5 0;
+#X connect 28 0 22 0;
+#X connect 29 0 23 0;
+#X restore 900 630 pd preset-7e;
+#X connect 67 0 144 0;
+#X connect 67 1 145 0;
+#X connect 68 0 110 1;
+#X connect 69 0 110 2;
+#X connect 78 0 110 0;
 #X connect 79 0 71 0;
 #X connect 80 0 71 0;
 #X connect 81 0 71 0;
 #X connect 82 0 71 0;
-#X connect 84 0 169 0;
+#X connect 84 0 164 0;
+#X connect 85 0 128 0;
+#X connect 85 0 129 0;
+#X connect 85 0 130 0;
+#X connect 85 0 131 0;
 #X connect 85 0 132 0;
-#X connect 85 0 133 0;
-#X connect 85 0 134 0;
-#X connect 85 0 135 0;
-#X connect 85 0 136 0;
-#X connect 88 0 124 0;
-#X connect 89 0 146 0;
-#X connect 89 0 147 0;
-#X connect 89 0 148 0;
-#X connect 90 0 144 0;
-#X connect 90 0 145 0;
-#X connect 95 0 142 0;
-#X connect 95 0 143 0;
-#X connect 100 0 67 0;
-#X connect 100 1 67 1;
-#X connect 117 0 120 0;
-#X connect 118 0 120 1;
-#X connect 122 0 175 0;
-#X connect 123 0 163 0;
-#X connect 124 0 71 0;
-#X connect 125 0 164 0;
-#X connect 126 0 162 0;
-#X connect 127 0 128 0;
-#X connect 129 0 141 0;
-#X connect 131 0 130 0;
-#X connect 137 0 161 0;
-#X connect 138 0 100 2;
-#X connect 140 0 166 0;
-#X connect 152 0 124 0;
-#X connect 153 0 79 0;
-#X connect 154 0 80 0;
-#X connect 155 0 81 0;
-#X connect 156 0 82 0;
-#X connect 161 0 176 0;
-#X connect 165 0 168 0;
-#X connect 166 0 167 0;
-#X connect 167 0 165 0;
-#X connect 167 1 165 1;
-#X connect 168 0 100 2;
-#X connect 169 0 85 0;
-#X connect 169 1 129 0;
-#X connect 169 2 95 0;
-#X connect 169 3 90 0;
-#X connect 169 4 89 0;
-#X connect 172 0 171 0;
-#X connect 176 0 100 0;
-#X connect 176 1 100 1;
-#X coords 0 -1 1 1 571 605 1 -1 9;
+#X connect 85 0 194 0;
+#X connect 85 0 193 0;
+#X connect 88 0 120 0;
+#X connect 89 0 141 0;
+#X connect 89 0 142 0;
+#X connect 89 0 143 0;
+#X connect 90 0 140 0;
+#X connect 90 0 185 0;
+#X connect 94 0 138 0;
+#X connect 94 0 139 0;
+#X connect 96 0 67 0;
+#X connect 96 1 67 1;
+#X connect 113 0 116 0;
+#X connect 114 0 116 1;
+#X connect 118 0 170 0;
+#X connect 119 0 158 0;
+#X connect 120 0 71 0;
+#X connect 121 0 159 0;
+#X connect 122 0 157 0;
+#X connect 123 0 124 0;
+#X connect 125 0 137 0;
+#X connect 127 0 126 0;
+#X connect 133 0 156 0;
+#X connect 134 0 96 2;
+#X connect 136 0 161 0;
+#X connect 147 0 120 0;
+#X connect 148 0 79 0;
+#X connect 149 0 80 0;
+#X connect 150 0 81 0;
+#X connect 151 0 82 0;
+#X connect 156 0 171 0;
+#X connect 160 0 163 0;
+#X connect 161 0 162 0;
+#X connect 162 0 160 0;
+#X connect 162 1 160 1;
+#X connect 163 0 96 2;
+#X connect 164 0 85 0;
+#X connect 164 1 125 0;
+#X connect 164 2 94 0;
+#X connect 164 3 90 0;
+#X connect 164 4 89 0;
+#X connect 167 0 166 0;
+#X connect 168 0 173 0;
+#X connect 171 0 96 0;
+#X connect 171 1 96 1;
+#X connect 181 0 186 0;
+#X connect 182 0 181 0;
+#X connect 182 0 192 0;
+#X connect 182 0 196 0;
+#X connect 183 0 186 1;
+#X connect 184 0 189 1;
+#X connect 184 0 198 1;
+#X connect 184 0 197 0;
+#X connect 186 0 188 0;
+#X connect 187 0 188 0;
+#X connect 188 0 189 0;
+#X connect 189 0 190 0;
+#X connect 190 0 191 0;
+#X connect 192 0 187 0;
+#X connect 196 0 199 0;
+#X connect 197 0 191 0;
+#X connect 197 0 195 0;
+#X connect 198 0 197 0;
+#X connect 199 0 198 0;
+#X connect 199 1 197 1;
+#X connect 200 0 204 0;
+#X connect 201 0 205 0;
+#X connect 203 0 202 0;
+#X coords 0 -1 1 1 610 630 1 0 0;

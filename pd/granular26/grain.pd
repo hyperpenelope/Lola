@@ -1,4 +1,4 @@
-#N canvas 60 27 1203 1094 10;
+#N canvas 60 27 1206 1094 10;
 #X obj 240 680 *~;
 #X obj 240 820 *~;
 #N canvas 797 439 454 302 rev 0;
@@ -76,7 +76,7 @@ don't start all form the same place., f 46;
 #X connect 5 0 4 0;
 #X connect 6 0 3 1;
 #X restore 300 610 pd display-grain;
-#N canvas 784 424 481 394 grain-state/number 1;
+#N canvas 784 423 482 421 grain-state/number 1;
 #X obj 224 54 loadbang;
 #X obj 224 169 s \$0-grain-nr;
 #X obj 149 123 >=;
@@ -113,7 +113,7 @@ don't start all form the same place., f 46;
 #X text -50 150 So we need to play the snippet1000 / grain-size times
 per second.;
 #X text -50 660 Multiply by the number of samples inthe sample.;
-#N canvas 788 428 981 695 grain-start-pos 0;
+#N canvas 786 426 985 697 grain-start-pos 0;
 #X obj 60 190 * 0.01;
 #X obj 60 20 loadbang;
 #X obj 10 20 inlet;
@@ -144,10 +144,10 @@ per second.;
 #X floatatom 10 270 5 0 0 0 - - -, f 5;
 #X floatatom 150 200 5 0 0 0 - - -, f 5;
 #X obj 170 150 t b f;
-#X obj 160 30 r g26-\$2-grain-centre;
 #X obj 300 30 r g26-\$2-random-pos;
-#X obj 440 30 r g26-\$2-grain-centre;
 #X obj 580 30 r g26-\$2-random-pos;
+#X obj 160 30 r g26-\$2-grain-cntr;
+#X obj 440 30 r g26-\$2-grain-cntr;
 #X connect 0 0 10 0;
 #X connect 0 0 14 0;
 #X connect 1 0 5 0;
@@ -178,10 +178,10 @@ per second.;
 #X connect 23 0 18 0;
 #X connect 29 0 9 0;
 #X connect 29 1 9 1;
-#X connect 30 0 19 0;
-#X connect 31 0 20 0;
-#X connect 32 0 21 0;
-#X connect 33 0 22 0;
+#X connect 30 0 20 0;
+#X connect 31 0 22 0;
+#X connect 32 0 19 0;
+#X connect 33 0 21 0;
 #X restore 310 500 pd grain-start-pos;
 #X text -50 540 Next add the grain start position \, which is the
 position in the sample(between 0 and 1) where the snippetbegins.
