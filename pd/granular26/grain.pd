@@ -1,4 +1,4 @@
-#N canvas 60 27 1206 1094 10;
+#N canvas 714 26 1206 1015 10;
 #X obj 240 680 *~;
 #X obj 240 820 *~;
 #N canvas 797 439 454 302 rev 0;
@@ -34,10 +34,9 @@
 #X restore 260 230 pd rev;
 #X obj 260 570 wrap~;
 #X obj 240 871 outlet~;
-#N canvas 513 391 716 648 random-phase 0;
+#N canvas 513 417 716 648 random-phase 0;
 #X obj 80 380 outlet;
-#X text 10 60 Set random phase for each individual grain \, so they
-don't start all form the same place., f 46;
+#X text 10 60 Set random phase for each individual grain \, so they don't start all form the same place., f 46;
 #X obj 150 280 * 0.0001;
 #X obj 100 220 mod 9;
 #X obj 100 250 + 1;
@@ -63,7 +62,7 @@ don't start all form the same place., f 46;
 #X restore 260 70 pd random-phase;
 #N canvas 795 522 551 469 display-grain 0;
 #X obj 181 132 r \$0-grain-nr;
-#X floatatom 192 154 5 0 0 0 - - -, f 5;
+#X floatatom 192 154 5 0 0 0 - - - 0;
 #X obj 160 70 inlet~;
 #X obj 160 200 send;
 #X obj 160 100 snapshot~;
@@ -76,7 +75,7 @@ don't start all form the same place., f 46;
 #X connect 5 0 4 0;
 #X connect 6 0 3 1;
 #X restore 300 610 pd display-grain;
-#N canvas 784 423 482 421 grain-state/number 1;
+#N canvas 784 475 482 421 grain-state/number 0;
 #X obj 224 54 loadbang;
 #X obj 224 169 s \$0-grain-nr;
 #X obj 149 123 >=;
@@ -96,24 +95,16 @@ don't start all form the same place., f 46;
 #X restore 20 -30 pd grain-state/number;
 #X obj 20 0 switch~;
 #X obj 170 610 snapshot~;
-#X obj 170 590 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X floatatom 170 630 5 0 0 0 - - -, f 5;
+#X obj 170 590 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X floatatom 170 630 5 0 0 0 - - - 0;
 #X obj 170 720 snapshot~;
-#X obj 170 700 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X floatatom 170 747 5 0 0 0 - - -, f 5;
+#X obj 170 700 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X floatatom 170 747 5 0 0 0 - - - 0;
 #X obj 170 240 snapshot~;
-#X obj 170 220 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X floatatom 170 260 5 0 0 0 - - -, f 5;
+#X obj 170 220 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X floatatom 170 260 5 0 0 0 - - - 0;
 #X obj 260 550 +~;
-#X text -50 100 Each grain plays a snippet of the samplerepeatedly
-\, this part being grain-sizemilliseconds long.;
-#X text -50 150 So we need to play the snippet1000 / grain-size times
-per second.;
-#X text -50 660 Multiply by the number of samples inthe sample.;
-#N canvas 786 426 985 697 grain-start-pos 0;
+#N canvas 786 376 985 697 grain-start-pos 0;
 #X obj 60 190 * 0.01;
 #X obj 60 20 loadbang;
 #X obj 10 20 inlet;
@@ -128,11 +119,11 @@ per second.;
 #X obj 200 200 t b f;
 #X obj 580 80 t b f;
 #X obj 300 80 t b f;
-#X floatatom 10 210 5 0 0 0 - - -, f 5;
+#X floatatom 10 210 5 0 0 0 - - - 0;
 #X obj 60 300 +;
-#X floatatom 10 320 5 0 0 0 - - -, f 5;
-#X floatatom 100 150 5 0 0 0 - - -, f 5;
-#X floatatom 310 150 5 0 0 0 - - -, f 5;
+#X floatatom 10 320 5 0 0 0 - - - 0;
+#X floatatom 100 150 5 0 0 0 - - - 0;
+#X floatatom 310 150 5 0 0 0 - - - 0;
 #X obj 160 50 * 0.01;
 #X obj 300 50 * 0.01;
 #X obj 440 50 * 0.01;
@@ -141,8 +132,8 @@ per second.;
 #X text 190 110 Lower end of random window;
 #X text 470 110 Upper end of random window;
 #X text 240 180 Width of random window;
-#X floatatom 10 270 5 0 0 0 - - -, f 5;
-#X floatatom 150 200 5 0 0 0 - - -, f 5;
+#X floatatom 10 270 5 0 0 0 - - - 0;
+#X floatatom 150 200 5 0 0 0 - - - 0;
 #X obj 170 150 t b f;
 #X obj 300 30 r g26-\$2-random-pos;
 #X obj 580 30 r g26-\$2-random-pos;
@@ -183,9 +174,6 @@ per second.;
 #X connect 32 0 19 0;
 #X connect 33 0 21 0;
 #X restore 310 500 pd grain-start-pos;
-#X text -50 540 Next add the grain start position \, which is the
-position in the sample(between 0 and 1) where the snippetbegins.
-;
 #X obj 310 871 outlet~;
 #N canvas 1158 27 890 1094 pan-spray 0;
 #X obj 100 100 inlet~;
@@ -217,9 +205,9 @@ position in the sample(between 0 and 1) where the snippetbegins.
 #X connect 14 0 1 1;
 #X connect 15 0 13 0;
 #X restore 240 841 pd pan-spray;
-#X obj 500 480 t b;
+#X obj 499 498 t b;
 #X obj 500 810 t b;
-#N canvas 881 27 889 1094 phasor-freq 0;
+#N canvas 57 26 889 1015 phasor-freq 0;
 #X obj 140 280 outlet;
 #X obj 160 150 -;
 #X obj 290 90 t b f;
@@ -227,7 +215,6 @@ position in the sample(between 0 and 1) where the snippetbegins.
 #X obj 140 240 pow;
 #X obj 160 190 t b f;
 #X obj 140 220 f 2;
-#X floatatom 200 260 12 0 0 0 - - -, f 12;
 #X obj 160 120 f 60;
 #X text 290 140 fr = 2^((mp-sp)/12);
 #X text 290 160 fr = frequency to scan through sample;
@@ -238,32 +225,28 @@ position in the sample(between 0 and 1) where the snippetbegins.
 #X text 220 10 MIDI pitch;
 #X obj 290 70 r g26-\$2-sample-pitch;
 #X connect 1 0 3 0;
-#X connect 2 0 8 0;
+#X connect 2 0 7 0;
 #X connect 2 1 1 1;
 #X connect 3 0 5 0;
-#X connect 4 0 7 0;
 #X connect 4 0 0 0;
 #X connect 5 0 6 0;
 #X connect 5 1 4 1;
 #X connect 6 0 4 0;
-#X connect 8 0 1 0;
-#X connect 13 0 8 0;
-#X connect 13 1 8 1;
-#X connect 14 0 13 0;
-#X connect 16 0 2 0;
+#X connect 7 0 1 0;
+#X connect 12 0 7 0;
+#X connect 12 1 7 1;
+#X connect 13 0 12 0;
+#X connect 15 0 2 0;
 #X restore 360 40 pd phasor-freq;
 #X obj 230 180 r g26-\$2-reverse;
 #X obj 360 -20 inlet;
 #X text 360 -40 MIDI pitch;
 #X obj 260 660 r g26-\$2-size-in-samples;
-#X text -50 190 This is achieved with a phasor~ with that frequency
-\, adjusted according to the pitch of the incoming MIDI note., f
-35;
 #X obj 290 720 loadbang;
 #X obj 290 740 symbol g26-\$2-grain;
 #X msg 290 760 set \$1;
 #X obj 240 790 tabread4~;
-#N canvas 796 438 456 303 grain-window 0;
+#N canvas 796 464 456 303 grain-window 0;
 #X obj 20 113 outlet~;
 #X obj 20 0 inlet~;
 #X obj 20 50 *~;
@@ -292,30 +275,37 @@ position in the sample(between 0 and 1) where the snippetbegins.
 #X obj 280 340 /~;
 #X obj 300 310 r g26-\$2-size-in-samples;
 #X obj 170 370 snapshot~;
-#X obj 170 350 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X floatatom 170 390 5 0 0 0 - - -, f 5;
-#X text 530 410 This will send a bang when the main phasor signal is
-about to reach 1, f 30;
+#X obj 170 350 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X floatatom 170 390 5 0 0 0 - - - 0;
 #X text 570 -60 Size of grain in samples;
 #X obj 170 540 snapshot~;
-#X obj 170 520 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X floatatom 170 560 5 0 0 0 - - -, f 5;
+#X obj 170 520 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X floatatom 170 560 5 0 0 0 - - - 0;
 #X obj 500 380 threshold~ 0.99 0 0.01 0;
 #X msg 260 90 set \$1;
 #X obj 100 0 sel 1;
+#X text 491 118 The loop~ generates a sawtooth whose frequency is determined by a transposition factor (left inlet) and window size (right inlet)., f 33;
+#X text 492 186 The window size is just the size of the grain as a number of samples., f 33;
+#X text 490 228 The transposition factor is calculated based on the pitch of the incoming MIDI note., f 33;
+#X text 491 271 Using loop~ ensures that if the grain size is changed by the user \, the sound will change smoothly., f 33;
+#X text 507 398 This will send a bang when the main sawtooth is about to reach 1, f 30;
+#X text 506 440 The randomly selected grain start position and pan are re-generated., f 30;
+#X text -40 557 Next add the grain start position \, which is the position in the sample (between 0 and 1) where the snippet begins., f 32;
+#X text -38 656 Multiply by the number of samples in the sample., f 34;
+#X text -38 411 The next few steps turn the sawtooth into a signal of sample numbers covering the correct interval of the sample. This signal will be used to read from the sample., f 37;
+#X text -38 475 First \, the main sawtooth (after perhaps being inverted) is multiplied by (grain_size / sample_size) \, both values measured in samples., f 37;
+#X text -37 785 Read from the sample.;
 #X connect 0 0 12 0;
-#X connect 0 0 37 0;
-#X connect 1 0 25 0;
+#X connect 0 0 32 0;
+#X connect 1 0 21 0;
 #X connect 2 0 15 0;
-#X connect 2 0 46 0;
+#X connect 2 0 41 0;
 #X connect 3 0 6 0;
 #X connect 3 0 9 0;
 #X connect 3 0 0 0;
-#X connect 5 0 58 0;
+#X connect 5 0 52 0;
 #X connect 7 0 8 0;
-#X connect 7 0 59 0;
+#X connect 7 0 53 0;
 #X connect 9 0 11 0;
 #X connect 10 0 9 0;
 #X connect 12 0 14 0;
@@ -323,42 +313,42 @@ about to reach 1, f 30;
 #X connect 15 0 17 0;
 #X connect 16 0 15 0;
 #X connect 18 0 3 0;
-#X connect 22 0 39 0;
-#X connect 25 0 4 0;
-#X connect 25 1 24 0;
-#X connect 26 0 27 0;
-#X connect 27 0 25 1;
-#X connect 28 0 40 0;
-#X connect 29 0 2 1;
-#X connect 30 0 28 0;
-#X connect 32 0 0 1;
-#X connect 34 0 35 0;
-#X connect 35 0 36 0;
-#X connect 36 0 37 0;
-#X connect 37 0 1 0;
-#X connect 38 0 1 1;
-#X connect 39 0 18 1;
-#X connect 40 0 2 0;
-#X connect 40 0 39 1;
-#X connect 40 0 38 0;
-#X connect 40 0 57 0;
-#X connect 40 1 47 0;
-#X connect 41 0 40 1;
-#X connect 42 0 45 0;
-#X connect 43 0 42 0;
-#X connect 44 0 41 1;
-#X connect 45 0 41 0;
-#X connect 45 1 44 0;
-#X connect 46 0 18 0;
-#X connect 46 0 54 0;
-#X connect 47 0 46 1;
-#X connect 47 0 49 0;
-#X connect 48 0 47 1;
-#X connect 49 0 51 0;
-#X connect 50 0 49 0;
-#X connect 54 0 56 0;
-#X connect 55 0 54 0;
-#X connect 57 0 26 0;
-#X connect 57 0 22 0;
-#X connect 58 0 40 0;
-#X connect 59 0 5 0;
+#X connect 19 0 34 0;
+#X connect 21 0 4 0;
+#X connect 21 1 20 0;
+#X connect 22 0 23 0;
+#X connect 23 0 21 1;
+#X connect 24 0 35 0;
+#X connect 25 0 2 1;
+#X connect 26 0 24 0;
+#X connect 28 0 0 1;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 1 0;
+#X connect 33 0 1 1;
+#X connect 34 0 18 1;
+#X connect 35 0 2 0;
+#X connect 35 0 34 1;
+#X connect 35 0 33 0;
+#X connect 35 0 51 0;
+#X connect 35 1 42 0;
+#X connect 36 0 35 1;
+#X connect 37 0 40 0;
+#X connect 38 0 37 0;
+#X connect 39 0 36 1;
+#X connect 40 0 36 0;
+#X connect 40 1 39 0;
+#X connect 41 0 18 0;
+#X connect 41 0 48 0;
+#X connect 42 0 41 1;
+#X connect 42 0 44 0;
+#X connect 43 0 42 1;
+#X connect 44 0 46 0;
+#X connect 45 0 44 0;
+#X connect 48 0 50 0;
+#X connect 49 0 48 0;
+#X connect 51 0 22 0;
+#X connect 51 0 19 0;
+#X connect 52 0 35 0;
+#X connect 53 0 5 0;
