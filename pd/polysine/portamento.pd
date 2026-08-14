@@ -1,0 +1,68 @@
+#N canvas 106 0 1814 1024 12;
+#X obj 18 145 inlet;
+#X obj 79 145 inlet;
+#X obj 369 143 inlet;
+#X obj 177 919 outlet;
+#X obj 177 892 line 0 20;
+#X text 11 5 Portamento refers to a smooth change in pitch between
+two notes.;
+#X text 12 40 If a note arrives and no previous note is on \, then
+portamento will immediately send the note's corresponding frequency
+to the outlet.;
+#X text 12 88 If a note arrives and a previous note is on \, then portamento
+will ramp from whatever frequency it is currently sending to the frequency
+of the newest note.;
+#X obj 194 696 f;
+#X text 249 696 is a note playing? (0 \, 1);
+#X obj 127 755 spigot;
+#X obj 215 727 expr (1 - $f1);
+#X obj 176 785 spigot;
+#X obj 129 844 pack f 0;
+#X obj 95 632 f 1;
+#X text 93 536 the pitch should only enter the trigger object if it
+is a note-on message;
+#X obj 13 522 stripnote;
+#X text 319 841 ramp if a note is currently on \; otherwise jump;
+#X obj 153 238 sel 0;
+#X obj 153 265 f 0;
+#X obj 70 572 trigger f b f f b;
+#X text 324 753 pitch leaves spigot only if a note is currently on
+;
+#X text 325 780 pitch leaves spigot only if a note is NOT currently
+on;
+#X obj 369 171 s \$0-ptmto-ramptime;
+#X obj 154 291 s \$0-ptmto-noteoff;
+#X obj 213 664 r \$0-ptmto-noteoff;
+#X obj 239 815 r \$0-ptmto-ramptime;
+#X obj 8 677 s \$0-ptmto-pitch;
+#X text 295 230 If a note-off message arrives \, record the fact that
+there are no notes currently sounding.;
+#X text 296 267 This assumes that all notes are off as soon as a note-off
+message - for any note - is received. This assumption is wrong if you
+send all MIDI notes through this object. If two notes are played \,
+and only one is released \, then this will still be treated as meaning
+that all notes are off.;
+#X text 296 345 To avoid this \, pass the MIDI notes through a [monom]
+object before sending them to this object.;
+#X connect 0 0 16 0;
+#X connect 1 0 16 1;
+#X connect 1 0 18 0;
+#X connect 2 0 23 0;
+#X connect 4 0 3 0;
+#X connect 8 0 10 1;
+#X connect 8 0 11 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 1;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X connect 14 0 8 1;
+#X connect 16 0 20 0;
+#X connect 18 0 19 0;
+#X connect 19 0 24 0;
+#X connect 20 0 27 0;
+#X connect 20 1 14 0;
+#X connect 20 2 10 0;
+#X connect 20 3 12 0;
+#X connect 20 4 8 0;
+#X connect 25 0 8 1;
+#X connect 26 0 13 1;

@@ -1,0 +1,47 @@
+#N canvas 106 0 1814 1024 12;
+#X text 13 7 monom - strip note off messages \, except for a note-off
+affecting the last note that was played;
+#X obj 120 131 inlet;
+#X obj 181 131 inlet;
+#X obj 351 266 route;
+#X obj 120 219 stripnote;
+#X obj 119 559 outlet;
+#X obj 178 560 outlet;
+#X text 10 43 on the left \, stripnote immediately passes on all note-on
+messages to the outlets.;
+#X text 11 77 on the right \, the logic only passes on a message if
+(a) the pitch matches the most recently played note and (b) the velocity
+is 0 \, i.e. it is a note-off message.;
+#X obj 352 222 pack f f;
+#X obj 419 222 r \$0-prev-pitch;
+#X obj 343 299 sel 0;
+#X text 410 300 - the velocity != 0;
+#X text 408 265 - the pitch does not match the pitch of the previous
+note;
+#X obj 7 254 s \$0-prev-pitch;
+#X obj 244 437 f;
+#X obj 282 437 f;
+#X obj 342 398 trigger b b;
+#X obj 274 170 trigger f f;
+#X obj 190 170 trigger f f;
+#X text 414 246 bang the float objects holding pitch/velocity ONLY
+IF:;
+#X connect 1 0 4 0;
+#X connect 1 0 19 0;
+#X connect 2 0 4 1;
+#X connect 2 0 18 0;
+#X connect 3 0 11 0;
+#X connect 4 0 5 0;
+#X connect 4 0 14 0;
+#X connect 4 1 6 0;
+#X connect 9 0 3 0;
+#X connect 10 0 3 1;
+#X connect 11 0 17 0;
+#X connect 15 0 5 0;
+#X connect 16 0 6 0;
+#X connect 17 0 15 0;
+#X connect 17 1 16 0;
+#X connect 18 0 9 1;
+#X connect 18 1 16 1;
+#X connect 19 0 9 0;
+#X connect 19 1 15 1;
