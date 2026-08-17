@@ -1,8 +1,10 @@
 # Format of Echorus OSC messages
 
-Echorus produces sound by means of Pure Data (Pd) patches, with which it
-interacts by sending OSC messages.
-These messages can tell the patch to play a note, change its timbre, change
+Echorus produces sound by means of software synthesisers implemented in
+Pure Data (Pd).
+The notes to be played are sent to the synths via MIDI, but Echorus also
+controls several aspects of the synths by sending OSC messages.
+These messages can tell the patch to change its timbre and change
 effects on the sound, among other things.
 This is a draft specification of the kinds of OSC messages which the Echorus Pd
 patches will respond to.
@@ -20,8 +22,8 @@ Every OSC message must identify a patch by its ID.
 | 4  | granular26 (4) |
 | 5  | AlmondOrgan (1) |
 | 6  | AlmondOrgan (2) |
-| 7  | AlmondOrgan (3) |
-| 8  | AlmondOrgan (4) |
+| 7  | _reserved_ |
+| 8  | _reserved_ |
 | 9  | polysine (1) |
 | 10 | polysine (2) |
 | 11 | polysine (3) |
@@ -32,27 +34,7 @@ Every OSC message must identify a patch by its ID.
 Changes the instrument preset on the patch.
 
 The available presets vary by the patch.
-Here is an incomplete list:
-* granular26: `angelicchoir`, `celticdarkness`
-* AlmondOrgan: `vibra1`, `vibra2`
-* polysine: `satellite`
-
-## `midi [patch_id] [note] [velocity] [duration]`
-
-Instructs a patch to play a note.
-
-**Overlapping notes**: The patches react differently if they are sent
-overlapping notes, i.e. at least two notes where the second note starts
-before the first ends.
-This includes chords where several notes are triggered simultaneously!
-
-* granular26 is monophonic, so it switches to the second note immediately.
-* polysine is monophonic with portamento, so it ramps its frequency up or down
-from the pitch of the first note to the pitch of the second note.
-How fast this occurs depends on a parameter called "portamento time" which can
-be set within the patch.
-* AlmondOrgan is polyphonic with 12 voices, so the second note plays on top of
-the first note.
+Please see the main [README](README.md) for an up-to-date list.
 
 ## `env [patch_id] [preset_name]`
 
