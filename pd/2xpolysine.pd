@@ -9,6 +9,8 @@
 #X obj 553 518 common/reverbbox~;
 #X obj 405 484 r echorus-reverb-9;
 #X obj 941 487 r echorus-reverb-10;
+#X obj 411 51 r echorus-instr-9;
+#X obj 946 48 r echorus-instr-10;
 #X connect 0 0 6 0;
 #X connect 0 1 6 1;
 #X connect 1 0 7 0;
@@ -23,3 +25,5 @@
 #X connect 7 1 4 1;
 #X connect 8 0 6 2;
 #X connect 9 0 7 2;
+#X connect 10 0 0 2;
+#X connect 11 0 1 2;
