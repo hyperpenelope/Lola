@@ -51,13 +51,13 @@ AlmondOrgan is polyphonic with 12 voices.
 
 | Preset |
 |--------|
-| deep |
-| steel-pan |
-| hollow |
-| vibra |
-| booker |
-| brass1 |
-| brass2 |
+| Deep |
+| Steel_Pan |
+| Hollow |
+| Vibra |
+| Booker |
+| Brass1 |
+| Brass2 |
 
 ## polysine
 
@@ -70,14 +70,14 @@ the current note has ended.
 
 | Preset |
 |--------|
-| fundamental |
-| satellite |
-| 25 |
-| 36 |
-| frying-pan |
-| crystal |
-| qin |
-| even |
+| Fundamental |
+| Satellite |
+| Twenty5 |
+| Thirty6 |
+| Frying_Pan |
+| Crystal |
+| Qin |
+| Even |
 
 ## Sending MIDI to the synths
 
@@ -97,8 +97,8 @@ This is shown in the following table.
 | 8  | _reserved_ |
 | 9  | polysine (1) |
 | 10 | polysine (2) |
-| 11 | polysine (3) |
-| 12 | polysine (4) |
+| 11 | _reserved_ |
+| 12 | _reserved_ |
 
 So, for example, the second polysine instance listens for MIDI on channel 10
 using the Pd object `[notein 10]`.
