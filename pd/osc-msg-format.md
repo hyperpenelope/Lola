@@ -29,8 +29,8 @@ Every OSC message must identify a patch by its ID.
 | 8  | _reserved_ |
 | 9  | polysine (1) |
 | 10 | polysine (2) |
-| 11 | _reserved_ |
-| 12 | _reserved_ |
+| 11 | polysine (3) |
+| 12 | polysine (4) |
 
 ## `instr [patch_id] preset [preset_name]`
 
@@ -57,30 +57,17 @@ Currently available presets: `Off`, `Light`, `Medium_Hall`, `Small_Cave`, `Big_C
 
 Example message: `reverb 5 preset Medium_Hall`
 
-## `pan [patch_id] [percentage] [change_time]`
-
-**Not implemented yet.**
+## `pan [patch_id] [pan] [change_time]`
 
 Set the stereo pan of the patch.
-The percentage is interpreted as follows:
-* 0 = left only;
-* 50 = equal level in both left and right;
-* 100 = right only.
+The pan value is a number between -1 and 1 interpreted as follows:
+* -1 = left only;
+* 0 = equal level in both left and right;
+* 1 = right only.
+So -0.5 is panned quite strongly to the left, but not fully;
+0.1 is panned very slightly to the right; etc.
 
 The change is completed over `[change_time]` milliseconds, if given.
 
-Example: `pan 1 40 5000`
-
-## `fadein [patch_id] [duration]`
-
-**Not implemented yet.**
-
-Fades in the audio coming from the patch from zero to an appropriate level
-(which is determined by the patch) over a given duration.
-
-## `fadeout [patch_id] [duration]`
-
-**Not implemented yet.**
-
-Fades out the audio from the patch from its current level to zero over a given
-duration.
+Example: `pan 1 -0.25 5000` pans instrument 1 partially to the left over a
+period of 5 seconds.

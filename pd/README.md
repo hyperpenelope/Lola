@@ -22,17 +22,18 @@ These samples have the following pitches:
 
 | Preset | Note/Octave |
 |--------|-------------|
-| angelic-choir | D4 |
-| celtic-darkness | F3 |
-| mid-sax-v1 | E3 |
-| mid-sax-v2 | E3 |
-| candlelit-bath | C4 |
-| purring-cello | C#2 |
-| ready-for-jesus | B3 |
-| maidens-warble | F5 |
-| evolving-darkness | F3 |
-| evolving-jesus | B3 |
-| moments | G3 |
+| Angelic_Choir | D4 |
+| Celtic_Darkness | F3 |
+| Mid_Sax_v1 | E3 |
+| Mid_Sax_v2 | E3 |
+| Candlelit_Bath | C4 |
+| Purring_Cello | C#2 |
+| Ready_for_Jesus | B3 |
+| Maidens_Warble | F5 |
+| Bottle_Voice | G3 |
+| Evolving_Darkness | F3 |
+| Evolving_Jesus | B3 |
+| Moments | G4 |
 
 **Tip**: If you play a note with granular26 which is quite far from the sample's
 original pitch, the result often sounds horrible.
@@ -97,8 +98,8 @@ This is shown in the following table.
 | 8  | _reserved_ |
 | 9  | polysine (1) |
 | 10 | polysine (2) |
-| 11 | _reserved_ |
-| 12 | _reserved_ |
+| 11 | polysine (3) |
+| 12 | polysine (4) |
 
 So, for example, the second polysine instance listens for MIDI on channel 10
 using the Pd object `[notein 10]`.
